@@ -45,9 +45,11 @@
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
 <li><a href="#undo-redo-feature">3.1. Undo/Redo feature</a></li>
-<li><a href="#proposed-data-encryption">3.2. [Proposed] Data Encryption</a></li>
-<li><a href="#logging">3.3. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.4. Configuration</a></li>
+<li><a href="#manipulating-the-rating-field">3.2. Manipulating the Rating field</a></li>
+<li><a href="#editing-and-rating-a-person">3.3. Editing and rating a person</a></li>
+<li><a href="#proposed-data-encryption">3.4. [Proposed] Data Encryption</a></li>
+<li><a href="#logging">3.5. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.6. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a>
@@ -869,20 +871,76 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.2. [Proposed] Data Encryption</a></h3>
+<h3 id="manipulating-the-rating-field"><a class="link" href="#manipulating-the-rating-field">3.2. Manipulating the Rating field</a></h3>
+<div class="paragraph">
+<p>If a <code>Person</code> is instantiated without specifying <code>Rating</code> value, he will be assigned a <code>null rating</code> (indicated by -1 currently) by default. This will be displayed as <code>-</code> to user, indicating that this Person is yet to be rated.</p>
+</div>
+<div class="paragraph">
+<p>The <code>Rating</code> field can be manipulated by user through <code>edit</code> or <code>rate</code> command. However, the valid inputs for rating are <code>1, 2, 3, 4, or 5</code>. That said, the current implementation does not allow a user to assign <code>null rating</code> to an existing person.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-and-rating-a-person"><a class="link" href="#editing-and-rating-a-person">3.3. Editing and rating a person</a></h3>
+<div class="paragraph">
+<p><code>edit</code> command and <code>rate</code> command are implemented in a similar manner. They both involve modifying the field(s) of a person. The only difference is that <code>rate</code> can only change the <code>Rating</code> field, but <code>edit</code> can be used to change any field.</p>
+</div>
+<div class="paragraph">
+<p>The implementation of <code>edit</code> and <code>rate</code> command in the Logic component involves 4 objects:<br></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Person toEdit</p>
+</li>
+<li>
+<p>Person edited</p>
+</li>
+<li>
+<p>Parser: EditCommandParser or RateCommandParser</p>
+</li>
+<li>
+<p>EditPersonDescriptor</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Since all fields of the <code>Person</code> class are immutable, we need to use <code>edited</code> Person to replace the <code>toEdit</code> Person</p>
+</div>
+<div class="paragraph">
+<p>The details of implementation are as follow:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>Parser</code> extracts the new information for each field from user input.</p>
+</li>
+<li>
+<p><code>EditPersonDescriptor</code> is used to record which field(s) will be changed and the respective new value.</p>
+</li>
+<li>
+<p><code>edited</code> Person will be created, by obtaining the new value for modified fields from <code>EditPersonDescriptor</code>. The value of unmodified field(s) are obtained from <code>toEdit</code> Person.</p>
+</li>
+<li>
+<p><code>edited</code> Person is used to replace <code>toEdit</code> Person in <code>AddressBook</code></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.4. [Proposed] Data Encryption</a></h3>
 <div class="paragraph">
 <p><em>{Explain here how the data encryption feature will be implemented}</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.3. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.5. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.4, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.6, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -913,7 +971,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.4. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.6. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -3201,7 +3259,7 @@ Expected: Similar to previous.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-03-14 06:18:15 UTC
+Last updated 2018-03-14 06:19:25 UTC
 </div>
 </div>
 </body>
