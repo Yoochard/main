@@ -5,20 +5,20 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
-<title>AddressBook Level 4 - Developer Guide</title>
+<title>E.T. (Employee Tracker) - Developer Guide</title>
 <link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>AddressBook Level 4 - Developer Guide</h1>
+<h1>E.T. (Employee Tracker) - Developer Guide</h1>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>By: <code>Team SE-EDU</code>      Since: <code>Jun 2016</code>      Licence: <code>MIT</code></p>
+<p>By: <code>Team W15-B1</code>      Since: <code>Feb 2018</code>      Licence: <code>MIT</code></p>
 </div>
 </div>
 <div id="toc" class="toc">
@@ -2022,7 +2022,7 @@ for <code>RemarkCommandParser</code>.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">each employee has his/her dedicated timetable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">have a dedicated timetable for each employee</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">trace progress of that person</p></td>
 </tr>
 <tr>
@@ -2064,8 +2064,14 @@ for <code>RemarkCommandParser</code>.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">search employees by specific criteria</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">search employees by specific criteria (e.g. name and tags)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">search employees more easily</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">identify a person with name when carrying out commands</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">save time by not having to browse through a long list</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
@@ -2183,9 +2189,6 @@ for <code>RemarkCommandParser</code>.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -2204,13 +2207,13 @@ for <code>RemarkCommandParser</code>.</p>
 <p>User requests to list employees</p>
 </li>
 <li>
-<p>AddressBook shows a list of employees</p>
+<p>EmployeeTracker shows a list of employees</p>
 </li>
 <li>
 <p>User requests to add a entry to an employee&#8217;s timetable</p>
 </li>
 <li>
-<p>AddressBook adds the entry</p>
+<p>EmployeeTracker adds the entry</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2233,7 +2236,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>3a1. EmployeeTracker shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2253,13 +2256,13 @@ for <code>RemarkCommandParser</code>.</p>
 <p>User requests to list employees</p>
 </li>
 <li>
-<p>AddressBook shows a list of employees</p>
+<p>EmployeeTracker shows a list of employees</p>
 </li>
 <li>
 <p>User requests to give an employee a rating</p>
 </li>
 <li>
-<p>AddressBook add the rating</p>
+<p>EmployeeTracker add the rating</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2282,7 +2285,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>3a1. EmployeeTracker shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2295,7 +2298,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3b1. AddressBook shows an error message.</p>
+<p>3b1. EmployeeTracker shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2308,7 +2311,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>4a1. AddressBook updates the rating for the person with the new rating.</p>
+<p>4a1. EmployeeTracker updates the rating for the person with the new rating.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2331,10 +2334,10 @@ for <code>RemarkCommandParser</code>.</p>
 <p>AdressBook accesses the list of all employees</p>
 </li>
 <li>
-<p>AddressBook sorts the employees in the list by their ratings</p>
+<p>EmployeeTracker sorts the employees in the list by their ratings</p>
 </li>
 <li>
-<p>AddressBook shows the sorted list</p>
+<p>EmployeeTracker shows the sorted list</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2364,13 +2367,13 @@ for <code>RemarkCommandParser</code>.</p>
 <p>User requests to list all employees</p>
 </li>
 <li>
-<p>AddressBook shows a list of all employees</p>
+<p>EmployeeTracker shows a list of all employees</p>
 </li>
 <li>
 <p>User requests to add timetable entry to many employees</p>
 </li>
 <li>
-<p>AddressBook add the entry to many employees</p>
+<p>EmployeeTracker add the entry to many employees</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2393,7 +2396,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>3a1. EmployeeTracker shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2413,13 +2416,13 @@ for <code>RemarkCommandParser</code>.</p>
 <p>User requests to list all employees</p>
 </li>
 <li>
-<p>AddressBook shows a list of all employees</p>
+<p>EmployeeTracker shows a list of all employees</p>
 </li>
 <li>
 <p>User requests to add review to an employee</p>
 </li>
 <li>
-<p>AddressBook add the review to the employee</p>
+<p>EmployeeTracker add the review to the employee</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2442,7 +2445,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>3a1. EmployeeTracker shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2452,17 +2455,17 @@ for <code>RemarkCommandParser</code>.</p>
 </li>
 </ul>
 </div>
-<h3 id="use-case-export-addressbook" class="discrete">Use Case: Export AddressBook</h3>
+<h3 id="use-case-export-employeetracker" class="discrete">Use Case: Export EmployeeTracker</h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests export AddressBook into a directory</p>
+<p>User requests export EmployeeTracker into a directory</p>
 </li>
 <li>
-<p>AddressBook export the AddressBook data in a file to the directory specified</p>
+<p>EmployeeTracker export the EmployeeTracker data in a file to the directory specified</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2479,7 +2482,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a1. AddressBook shows an error message.</p>
+<p>1a1. EmployeeTracker shows an error message.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2489,17 +2492,17 @@ for <code>RemarkCommandParser</code>.</p>
 </li>
 </ul>
 </div>
-<h3 id="use-case-import-addressbook" class="discrete">Use Case: Import AddressBook</h3>
+<h3 id="use-case-import-employeetracker" class="discrete">Use Case: Import EmployeeTracker</h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests import AddressBook file from a directory</p>
+<p>User requests import EmployeeTracker file from a directory</p>
 </li>
 <li>
-<p>AddressBook import the AddressBook data from the file in the directory specified</p>
+<p>EmployeeTracker import the EmployeeTracker data from the file in the directory specified</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2516,7 +2519,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a1. AddressBook shows an error message.</p>
+<p>1a1. EmployeeTracker shows an error message.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2539,13 +2542,13 @@ for <code>RemarkCommandParser</code>.</p>
 <p>User requests to view the timetable of a person.</p>
 </li>
 <li>
-<p>AddressBook shows the timetable of that person.</p>
+<p>EmployeeTracker shows the timetable of that person.</p>
 </li>
 <li>
 <p>User requests to update the information of an entry in the timetable.</p>
 </li>
 <li>
-<p>AddressBook updates the new information for that timetable entry.</p>
+<p>EmployeeTracker updates the new information for that timetable entry.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2568,7 +2571,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2a1. AddressBook shows an error message.</p>
+<p>2a1. EmployeeTracker shows an error message.</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2587,7 +2590,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>4a1. AddressBook shows an error message</p>
+<p>4a1. EmployeeTracker shows an error message</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2600,7 +2603,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>4b1. AddressBook shows an error message</p>
+<p>4b1. EmployeeTracker shows an error message</p>
 </li>
 <li>
 <p>Use case resumes at step 2.</p>
@@ -2609,11 +2612,11 @@ for <code>RemarkCommandParser</code>.</p>
 </div>
 </li>
 <li>
-<p>5a. AddressBook couldn&#8217;t write to save file.</p>
+<p>5a. EmployeeTracker couldn&#8217;t write to save file.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>5a1. AddressBook shows error message and requests user to resolve the error.</p>
+<p>5a1. EmployeeTracker shows error message and requests user to resolve the error.</p>
 </li>
 <li>
 <p>5a2. User resolves the error.</p>
@@ -2639,13 +2642,13 @@ for <code>RemarkCommandParser</code>.</p>
 <p>User requests to view the timetable of a person.</p>
 </li>
 <li>
-<p>AddressBook shows the timetable of that person.</p>
+<p>EmployeeTracker shows the timetable of that person.</p>
 </li>
 <li>
 <p>User requests to delete an entry in that person&#8217;s timetable.</p>
 </li>
 <li>
-<p>AddressBook deletes the timetable entry.</p>
+<p>EmployeeTracker deletes the timetable entry.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2668,7 +2671,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2a1. AddressBook shows an error message.</p>
+<p>2a1. EmployeeTracker shows an error message.</p>
 </li>
 <li>
 <p>Use case resumes at step 2.</p>
@@ -2687,7 +2690,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>4a1. AddressBook shows an error message</p>
+<p>4a1. EmployeeTracker shows an error message</p>
 </li>
 <li>
 <p>Use case resumes at step 2.</p>
@@ -2696,11 +2699,11 @@ for <code>RemarkCommandParser</code>.</p>
 </div>
 </li>
 <li>
-<p>5a. AddressBook couldn&#8217;t write to save file.</p>
+<p>5a. EmployeeTracker couldn&#8217;t write to save file.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>5a1. AddressBook shows error message and requests user to resolve the error.</p>
+<p>5a1. EmployeeTracker shows error message and requests user to resolve the error.</p>
 </li>
 <li>
 <p>5a2. User resolves the error.</p>
@@ -2726,7 +2729,7 @@ for <code>RemarkCommandParser</code>.</p>
 <p>User requests to email a person in the list.</p>
 </li>
 <li>
-<p>AddressBook opens up a webpage for composing email to that person.</p>
+<p>EmployeeTracker opens up a webpage for composing email to that person.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2749,7 +2752,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2a1. AddressBook shows an error message.</p>
+<p>2a1. EmployeeTracker shows an error message.</p>
 </li>
 <li>
 <p>Use case resumes at step 2.</p>
@@ -2762,7 +2765,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows error message.</p>
+<p>3a1. EmployeeTracker shows error message.</p>
 </li>
 <li>
 <p>Use case ends.</p>
@@ -2785,7 +2788,7 @@ for <code>RemarkCommandParser</code>.</p>
 <p>User requests to export the list of persons as excel sheet and save it in a save file path.</p>
 </li>
 <li>
-<p>AddressBook exports the list of persons as excel sheet.</p>
+<p>EmployeeTracker exports the list of persons as excel sheet.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2808,7 +2811,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2a1. AddressBook shows an error message.</p>
+<p>2a1. EmployeeTracker shows an error message.</p>
 </li>
 <li>
 <p>Use case resumes at step 2.</p>
@@ -2817,11 +2820,11 @@ for <code>RemarkCommandParser</code>.</p>
 </div>
 </li>
 <li>
-<p>3a. AddressBook couldn&#8217;t write to save file.</p>
+<p>3a. EmployeeTracker couldn&#8217;t write to save file.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows error message and requests user to resolve the error.</p>
+<p>3a1. EmployeeTracker shows error message and requests user to resolve the error.</p>
 </li>
 <li>
 <p>3a2. User resolves the error.</p>
@@ -2841,16 +2844,16 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User starts the AddressBook program.</p>
+<p>User starts the EmployeeTracker program.</p>
 </li>
 <li>
-<p>AddressBook requests user to enter username and password.</p>
+<p>EmployeeTracker requests user to enter username and password.</p>
 </li>
 <li>
 <p>User enters his username and password</p>
 </li>
 <li>
-<p>AddressBook shows the content.</p>
+<p>EmployeeTracker shows the content.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2867,7 +2870,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>3a1. EmployeeTracker shows an error message.</p>
 </li>
 <li>
 <p>Use case resumes at step 1.</p>
@@ -2887,7 +2890,7 @@ for <code>RemarkCommandParser</code>.</p>
 <p>User requests to lock the addressbook by entering "lock" and password</p>
 </li>
 <li>
-<p>AddressBook is locked unless user unlocks it.</p>
+<p>EmployeeTracker is locked unless user unlocks it.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
@@ -2911,7 +2914,7 @@ for <code>RemarkCommandParser</code>.</p>
 <p>User requests to unlock the addressbook by entering "unlock" and the password set earlier</p>
 </li>
 <li>
-<p>AddressBook unlocked. Use case ends.</p>
+<p>EmployeeTracker unlocked. Use case ends.</p>
 </li>
 </ol>
 </div>
@@ -2945,13 +2948,13 @@ for <code>RemarkCommandParser</code>.</p>
 <p>User requests to list employees</p>
 </li>
 <li>
-<p>AddressBook shows a list of employees</p>
+<p>EmployeeTracker shows a list of employees</p>
 </li>
 <li>
 <p>User requests to change the rating of one of the employees from the list</p>
 </li>
 <li>
-<p>AddressBook changes the rating of the employee.</p>
+<p>EmployeeTracker changes the rating of the employee.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2968,7 +2971,7 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows an error message.
+<p>3a1. EmployeeTracker shows an error message.
 Use case resumes at step 2.</p>
 </li>
 </ul>
@@ -2979,7 +2982,7 @@ Use case resumes at step 2.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3b1. AddressBook shows an error message</p>
+<p>3b1. EmployeeTracker shows an error message</p>
 <div class="paragraph">
 <p>Use case resumes at step 2.</p>
 </div>
@@ -2999,7 +3002,7 @@ Use case resumes at step 2.</p>
 <p>User requests to change the scheme/theme/skin on the User Interface</p>
 </li>
 <li>
-<p>AddressBook changes the scheme/theme/skin</p>
+<p>EmployeeTracker changes the scheme/theme/skin</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -3259,7 +3262,7 @@ Expected: Similar to previous.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-03-14 06:31:42 UTC
+Last updated 2018-03-14 06:54:20 UTC
 </div>
 </div>
 </body>
