@@ -352,27 +352,29 @@ Gives the 2nd person in the list of Alex(s) a 2-star rating.</p>
 <div class="sect2">
 <h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">3.6. Locating persons by name: <code>find</code></a></h3>
 <div class="paragraph">
-<p>Finds persons whose names contain any of the given keywords.<br>
-Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
+<p>Finds persons whose names or tags contain any of the given keywords.<br>
+Format: <code>find (n/NAME_KEYWORDS | t/TAG_KEYWORDS)  [n/MORE_KEYWORDS] [t/MORE_KEYWORDS]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>The search is case insensitive. e.g <code>hans</code> will match <code>Hans</code></p>
+<p>The search is case insensitive.<br>
+e.g. <code>n/hans</code> will match <code>Hans</code></p>
 </li>
 <li>
-<p>The order of the keywords does not matter. e.g. <code>Hans Bo</code> will match <code>Bo Hans</code></p>
+<p>The order of the keywords does not matter.<br>
+e.g. <code>n/Hans Bo</code> will match <code>Bo Hans</code></p>
 </li>
 <li>
-<p>Only the name is searched.</p>
+<p>Both name and tag are searched (i.e. <code>AND</code> or intersection).<br>
+e.g. <code>n/Hans Bo t/Friends</code>
+will match <code>Hans</code> with tag <code>Friends</code> but not <code>Bo</code> with tag <code>Friends</code> or <code>Hans</code> with tag <code>Enemy</code></p>
 </li>
 <li>
-<p>Only full words will be matched e.g. <code>Han</code> will not match <code>Hans</code></p>
-</li>
-<li>
-<p>Persons matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
+<p>Only full words will be matched e.g.<br>
+<code>n/Han</code> will not match <code>Hans</code></p>
 </li>
 </ul>
 </div>
@@ -384,12 +386,25 @@ Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>find John</code><br>
-Returns <code>john</code> and <code>John Doe</code></p>
+<p><code>find n/John</code><br>
+Returns any person having names <code>John</code>.<br>
+e.g. <code>john</code> and <code>John Doe</code></p>
 </li>
 <li>
-<p><code>find Betsy Tim John</code><br>
+<p><code>find n/Betsy Tim John</code><br>
+Returns any person having names <code>Betsy Tim John</code></p>
+</li>
+<li>
+<p><code>find n/Betsy n/Tim n/John</code><br>
 Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
+</li>
+<li>
+<p><code>find n/John t/Friends Colleagues</code><br>
+Returns any person having both names <code>John</code> and both tags <code>Friends</code> and <code>Colleagues</code></p>
+</li>
+<li>
+<p><code>find n/John t/Friends t/Colleagues</code><br>
+Returns any person having both names <code>John</code> and either tags <code>Friends</code> or <code>Colleagues</code></p>
 </li>
 </ul>
 </div>
@@ -779,7 +794,7 @@ e.g.<code>select 2</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-03-18 13:33:32 UTC
+Last updated 2018-03-18 16:02:06 UTC
 </div>
 </div>
 </body>
