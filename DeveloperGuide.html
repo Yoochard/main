@@ -47,12 +47,9 @@
 <li><a href="#undo-redo-feature">3.1. Undo/Redo feature</a></li>
 <li><a href="#manipulating-the-rating-field">3.2. Manipulating the Rating field</a></li>
 <li><a href="#editing-and-rating-a-person">3.3. Editing and rating a person</a></li>
-<li><a href="#lock-and-unlock-the-application">3.4. Lock and unlock the application</a></li>
-<li><a href="#every-employee-has-own-timetable">3.5. Every employee has own timetable</a></li>
-<li><a href="#add-events-on-anyone-s-timetable">3.6. Add events on anyone&#8217;s timetable</a></li>
-<li><a href="#proposed-data-encryption">3.7. [Proposed] Data Encryption</a></li>
-<li><a href="#logging">3.8. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.9. Configuration</a></li>
+<li><a href="#proposed-data-encryption">3.4. [Proposed] Data Encryption</a></li>
+<li><a href="#logging">3.5. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.6. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a>
@@ -930,140 +927,20 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 </div>
 <div class="sect2">
-<h3 id="lock-and-unlock-the-application"><a class="link" href="#lock-and-unlock-the-application">3.4. Lock and unlock the application</a></h3>
-<div class="paragraph">
-<p><code>lock</code> command and <code>unlock</code> command are implemented in a similar manner. Both have the same command format.</p>
-</div>
-<div class="paragraph">
-<p>The implementation of <code>lock</code> and <code>unlock</code> command in the Logic component involves 5 objects:<br></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Command: LockCommand</p>
-</li>
-<li>
-<p>Command: UnlockCommand</p>
-</li>
-<li>
-<p>CommandParser: LockCommandParser or UnlockCommandParser</p>
-</li>
-<li>
-<p>AddressBookParser</p>
-</li>
-<li>
-<p>LogicManager</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>The details of implementation of <code>lock</code> command are as follow:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><code>AddressBookParser</code> is used to let the application accept <code>lock</code> command.</p>
-</li>
-<li>
-<p><code>LockCommandParser</code> extracts the password from user input.</p>
-</li>
-<li>
-<p><code>LockCommand</code> is used to set the password in LogicManager.</p>
-</li>
-<li>
-<p><code>LogicManager</code> is used to decide whether the application is locked or not, and decide the logic flow accordingly.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>The details of implementation of <code>unlock</code> command are similar to <code>lock</code> command and are as follow:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><code>AddressBookParser</code> is used to let the application accept <code>unlock</code> command.</p>
-</li>
-<li>
-<p><code>UnlockCommandParser</code> extracts the password from user input.</p>
-</li>
-<li>
-<p><code>UnlockCommand</code> is used to compare the user input password to the password stored in LogicManager by last <code>lock</code> caommand,
-if they are the same, unlock the application, otherwise, inform incorrect password.</p>
-</li>
-<li>
-<p><code>LogicManager</code> is used to decide whether the application is locked or not, and decide the logic flow accordingly.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="every-employee-has-own-timetable"><a class="link" href="#every-employee-has-own-timetable">3.5. Every employee has own timetable</a></h3>
-<div class="paragraph">
-<p>To implement the timetables for employees, we use a third party source which is Google Calendar API. With this API, we
-can integrate the application with Google Calendar, and achieve things liking creating events as what we usually do on
-Google Calendar website through the command. The import of Google Calendar API is simple: just add the necessary
-dependencies in Build.gradle and which will import the external libraries after building.</p>
-</div>
-<div class="paragraph">
-<p>After we have the API, what we need to do is just automatically creating a new timetable (calendar) for every employee
-at the time this employee was added to the application. And this is what the CreateNewCalendar class for.</p>
-</div>
-<div class="paragraph">
-<p>Additionally, as everyone has their own unique timetables, a new field called <code>CalendarId</code> will be created for each
-employee, to indicate the associated timetables.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="add-events-on-anyone-s-timetable"><a class="link" href="#add-events-on-anyone-s-timetable">3.6. Add events on anyone&#8217;s timetable</a></h3>
-<div class="paragraph">
-<p><code>addEvent</code> command is used to add an event on one employee&#8217;s timetable. The implementation mainly touches 3 objects in
-the logic component:<br></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Command: TestAddEventCommand</p>
-</li>
-<li>
-<p>CommandParser: TestAddEventCommandParser</p>
-</li>
-<li>
-<p>AddressBookParser</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>The details of implementation of <code>addEvent</code> command are as follow:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><code>AddressBookParser</code> is used to let the application accept <code>addEvent</code> command.</p>
-</li>
-<li>
-<p><code>TestAddEventCommandParser</code> is used to extracts information of the event to be added from user input.</p>
-</li>
-<li>
-<p><code>TestAddEventCommand</code> is used to perform the addition of the event to one&#8217;s timetable with Google Calendar API.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.7. [Proposed] Data Encryption</a></h3>
+<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.4. [Proposed] Data Encryption</a></h3>
 <div class="paragraph">
 <p><em>{Explain here how the data encryption feature will be implemented}</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.8. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.5. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.9, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.6, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -1094,7 +971,7 @@ the logic component:<br></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.9. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.6. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -3447,7 +3324,7 @@ Expected: Similar to previous.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-03-19 15:53:15 UTC
+Last updated 2018-03-19 16:01:44 UTC
 </div>
 </div>
 </body>
