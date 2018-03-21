@@ -4,7 +4,6 @@ import static java.util.Objects.requireNonNull;
 
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -18,9 +17,6 @@ import seedu.address.model.person.exceptions.DuplicatePersonException;
 import seedu.address.model.person.exceptions.PersonNotFoundException;
 import seedu.address.model.tag.Tag;
 import seedu.address.model.tag.UniqueTagList;
-import seedu.address.model.timetableentry.TimetableEntry;
-import seedu.address.model.timetableentry.exceptions.DuplicateTimetableEntryException;
-import seedu.address.model.timetableentry.exceptions.TimetableEntryNotFoundException;
 
 /**
  * Wraps all data at the address-book level
@@ -30,7 +26,6 @@ public class AddressBook implements ReadOnlyAddressBook {
 
     private final UniquePersonList persons;
     private final UniqueTagList tags;
-    private LinkedList<TimetableEntry> timetableEntries;
 
     /*
      * The 'unusual' code block below is an non-static initialization block, sometimes used to avoid duplication
@@ -42,7 +37,6 @@ public class AddressBook implements ReadOnlyAddressBook {
     {
         persons = new UniquePersonList();
         tags = new UniqueTagList();
-        timetableEntries = new LinkedList<>();
     }
 
     public AddressBook() {}
@@ -65,10 +59,6 @@ public class AddressBook implements ReadOnlyAddressBook {
         this.tags.setTags(tags);
     }
 
-    public void setTimetableEntriesList(LinkedList<TimetableEntry> timetableEntriesList) {
-        this.timetableEntries = timetableEntriesList;
-    }
-
     /**
      * Resets the existing data of this {@code AddressBook} with {@code newData}.
      */
@@ -78,7 +68,6 @@ public class AddressBook implements ReadOnlyAddressBook {
         List<Person> syncedPersonList = newData.getPersonList().stream()
                 .map(this::syncWithMasterTagList)
                 .collect(Collectors.toList());
-        setTimetableEntriesList(newData.getTimetableEntriesList());
 
         try {
             setPersons(syncedPersonList);
@@ -142,11 +131,12 @@ public class AddressBook implements ReadOnlyAddressBook {
         // Rebuild the list of person tags to point to the relevant tags in the master tag list.
         final Set<Tag> correctTagReferences = new HashSet<>();
         personTags.forEach(tag -> correctTagReferences.add(masterTagObjects.get(tag)));
-        Person toReturn = new Person(
-                person.getName(), person.getPhone(), person.getEmail(), person.getAddress(), person.getRating(),
-                correctTagReferences, person.getCalendarId());
-        toReturn.setReview(person.getReview());
-        return toReturn;
+
+        Person personToReturn = new Person(person.getName(), person.getPhone(), person.getEmail(),
+                person.getAddress(), person.getRating(), person.getTags());
+        personToReturn.setReview(person.getReview());
+
+        return personToReturn;
     }
 
     /**
@@ -167,39 +157,11 @@ public class AddressBook implements ReadOnlyAddressBook {
         tags.add(t);
     }
 
-    //// timetable entry level operations
-    /**
-     * Adds a timetable entry to the address book.
-     */
-    public void addTimetableEntry(TimetableEntry timetableEntry) throws DuplicateTimetableEntryException {
-        if (timetableEntries.contains(timetableEntry)) {
-            throw new DuplicateTimetableEntryException();
-        }
-        timetableEntries.add(timetableEntry);
-    }
-
-    /**
-     * Removes a timetable entry to the address book.
-     */
-    public void removeTimetableEntry(String timetableEntryId) throws TimetableEntryNotFoundException {
-        boolean found = false;
-        for (TimetableEntry t: timetableEntries) {
-            if (t.getId().equals(timetableEntryId)) {
-                timetableEntries.remove(t);
-                found = true;
-            }
-        }
-        if (!found) {
-            throw new TimetableEntryNotFoundException();
-        }
-    }
-
     //// util methods
 
     @Override
     public String toString() {
-        return persons.asObservableList().size() + " persons, " + tags.asObservableList().size() +  " tags, "
-                + timetableEntries.size() + " timetable entries";
+        return persons.asObservableList().size() + " persons, " + tags.asObservableList().size() +  " tags";
         // TODO: refine later
     }
 
@@ -214,17 +176,11 @@ public class AddressBook implements ReadOnlyAddressBook {
     }
 
     @Override
-    public LinkedList<TimetableEntry> getTimetableEntriesList() {
-        return timetableEntries;
-    }
-
-    @Override
     public boolean equals(Object other) {
         return other == this // short circuit if same object
                 || (other instanceof AddressBook // instanceof handles nulls
                 && this.persons.equals(((AddressBook) other).persons)
-                && this.tags.equalsOrderInsensitive(((AddressBook) other).tags))
-                && this.timetableEntries.equals(((AddressBook) other).timetableEntries);
+                && this.tags.equalsOrderInsensitive(((AddressBook) other).tags));
     }
 
     @Override

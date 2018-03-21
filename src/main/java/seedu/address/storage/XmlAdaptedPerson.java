@@ -154,7 +154,6 @@ public class XmlAdaptedPerson {
         if (!Rating.isValidRating(this.rating)) {
             throw new IllegalValueException(Rating.MESSAGE_RATING_CONSTRAINTS);
         }
-
         final Rating rating = new Rating(this.rating);
 
         if (this.review == null) {

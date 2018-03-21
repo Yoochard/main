@@ -29,13 +29,11 @@ import com.google.api.services.calendar.model.EventDateTime;
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.person.Person;
-import seedu.address.model.timetableentry.TimetableEntry;
-import seedu.address.model.timetableentry.exceptions.DuplicateTimetableEntryException;
 
 /**
  * Adds an event to a person.
  */
-public class TestAddEventCommand extends UndoableCommand {
+public class TestAddEventCommand extends Command {
 
     public static final String COMMAND_WORD = "addEvent";
 
@@ -150,7 +148,7 @@ public class TestAddEventCommand extends UndoableCommand {
 
 
     @Override
-    public CommandResult executeUndoableCommand() throws CommandException {
+    public CommandResult execute() throws CommandException {
 
         List<Person> lastShownList = model.getFilteredPersonList();
         Person personToAddEvent = lastShownList.get(targetIndex.getZeroBased());
@@ -209,17 +207,6 @@ public class TestAddEventCommand extends UndoableCommand {
             event = service.events().insert(calendarId, event).execute();
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        TimetableEntry timetableEntry = new TimetableEntry(calendarId,
-                model.getPerson(targetIndex.getZeroBased()).getName().toString(),
-                title,
-                model.getPerson(targetIndex.getZeroBased()).getEmail().toString(),
-                event.getId(),
-                endTime);
-        try {
-            model.addTimetableEntry(timetableEntry);
-        } catch (DuplicateTimetableEntryException e) {
-            throw new CommandException("Duplicated event");
         }
         System.out.printf("Event created: %s\n", event.getHtmlLink());
         return new CommandResult(MESSAGE_SUCCESS);

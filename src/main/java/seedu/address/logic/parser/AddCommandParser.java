@@ -7,13 +7,11 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_PHONE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;
 
-import java.io.IOException;
 import java.util.Set;
 import java.util.stream.Stream;
 
 import seedu.address.commons.exceptions.IllegalValueException;
 //import seedu.address.logic.CreateNewCalendar;
-import seedu.address.logic.CreateNewCalendar;
 import seedu.address.logic.commands.AddCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.person.Address;
@@ -49,13 +47,8 @@ public class AddCommandParser implements Parser<AddCommand> {
             Address address = ParserUtil.parseAddress(argMultimap.getValue(PREFIX_ADDRESS)).get();
             Set<Tag> tagList = ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG));
 
-            String calendarId;
-            try {
-                calendarId = CreateNewCalendar.execute(name.fullName);
-            } catch (IOException e) { //not signed in
-                calendarId = "";
-            }
-            //String calendarId = "";
+            //String calendarId = CreateNewCalendar.execute(name.fullName);
+            String calendarId = "";
             Person person = new Person(name, phone, email, address, tagList, calendarId);
 
             return new AddCommand(person);

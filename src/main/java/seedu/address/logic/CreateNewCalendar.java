@@ -106,14 +106,17 @@ public class CreateNewCalendar {
      * Create a new calendar for person with personName.
      *
      */
-    public static String execute(String personName) throws IOException {
+    public static String execute(String personName) {
         // Build a new authorized API client service.
         // Note: Do not confuse this class with the
         //   com.google.api.services.calendar.model.Calendar class.
         com.google.api.services.calendar.Calendar service =
                 null;
-
-        service = getCalendarService();
+        try {
+            service = getCalendarService();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         // Create a new calendar
         com.google.api.services.calendar.model.Calendar calendar = new Calendar();
@@ -123,8 +126,12 @@ public class CreateNewCalendar {
 
         // Insert the new calendar
         String calendarId = "primary";
-        Calendar createdCalendar = service.calendars().insert(calendar).execute();
-        calendarId = createdCalendar.getId();
+        try {
+            Calendar createdCalendar = service.calendars().insert(calendar).execute();
+            calendarId = createdCalendar.getId();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         return calendarId;
     }

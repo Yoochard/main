@@ -10,7 +10,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import seedu.address.commons.exceptions.IllegalValueException;
 import seedu.address.model.AddressBook;
 import seedu.address.model.ReadOnlyAddressBook;
-import seedu.address.model.timetableentry.TimetableEntry;
 
 /**
  * An Immutable AddressBook that is serializable to XML format
@@ -22,8 +21,6 @@ public class XmlSerializableAddressBook {
     private List<XmlAdaptedPerson> persons;
     @XmlElement
     private List<XmlAdaptedTag> tags;
-    @XmlElement
-    private List<XmlAdaptedTimetableEntry> timetableEntries;
 
     /**
      * Creates an empty XmlSerializableAddressBook.
@@ -32,7 +29,6 @@ public class XmlSerializableAddressBook {
     public XmlSerializableAddressBook() {
         persons = new ArrayList<>();
         tags = new ArrayList<>();
-        timetableEntries = new ArrayList<>();
     }
 
     /**
@@ -42,10 +38,6 @@ public class XmlSerializableAddressBook {
         this();
         persons.addAll(src.getPersonList().stream().map(XmlAdaptedPerson::new).collect(Collectors.toList()));
         tags.addAll(src.getTagList().stream().map(XmlAdaptedTag::new).collect(Collectors.toList()));
-        for (TimetableEntry t: src.getTimetableEntriesList()) {
-            timetableEntries.add(new XmlAdaptedTimetableEntry(t.getCalendarId(), t.getOwnerName(), t.getEntryName(),
-                    t.getEndDate(), t.getOwnerEmail(), t.getId()));
-        }
     }
 
     /**
@@ -62,9 +54,6 @@ public class XmlSerializableAddressBook {
         for (XmlAdaptedPerson p : persons) {
             addressBook.addPerson(p.toModelType());
         }
-        for (XmlAdaptedTimetableEntry t : timetableEntries) {
-            addressBook.addTimetableEntry(t.toModelType());
-        }
         return addressBook;
     }
 
@@ -79,8 +68,6 @@ public class XmlSerializableAddressBook {
         }
 
         XmlSerializableAddressBook otherAb = (XmlSerializableAddressBook) other;
-        return persons.equals(otherAb.persons)
-                && tags.equals(otherAb.tags)
-                && timetableEntries.equals(otherAb.timetableEntries);
+        return persons.equals(otherAb.persons) && tags.equals(otherAb.tags);
     }
 }

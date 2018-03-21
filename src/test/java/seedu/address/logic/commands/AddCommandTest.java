@@ -24,9 +24,6 @@ import seedu.address.model.ReadOnlyAddressBook;
 import seedu.address.model.person.Person;
 import seedu.address.model.person.exceptions.DuplicatePersonException;
 import seedu.address.model.person.exceptions.PersonNotFoundException;
-import seedu.address.model.timetableentry.TimetableEntry;
-import seedu.address.model.timetableentry.exceptions.DuplicateTimetableEntryException;
-import seedu.address.model.timetableentry.exceptions.TimetableEntryNotFoundException;
 import seedu.address.testutil.PersonBuilder;
 
 public class AddCommandTest {
@@ -99,22 +96,6 @@ public class AddCommandTest {
      * A default model stub that have all of the methods failing.
      */
     private class ModelStub implements Model {
-
-        @Override
-        public Person getPerson(int index) throws IndexOutOfBoundsException {
-            return null;
-        }
-
-        @Override
-        public void deleteTimetableEntry(String id) throws TimetableEntryNotFoundException {
-
-        }
-
-        @Override
-        public void addTimetableEntry(TimetableEntry e) throws DuplicateTimetableEntryException {
-
-        }
-
         @Override
         public void addPerson(Person person) throws DuplicatePersonException {
             fail("This method should not be called.");
