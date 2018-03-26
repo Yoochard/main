@@ -5,14 +5,14 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
-<title>E.T. (Employee Tracker) - User Guide</title>
+<title>E.T. (Employees Tracker) - User Guide</title>
 <link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>E.T. (Employee Tracker) - User Guide</h1>
+<h1>E.T. (Employees Tracker) - User Guide</h1>
 </div>
 <div id="content">
 <div id="preamble">
@@ -34,36 +34,34 @@
 <li><a href="#listing-all-persons-code-list-code">3.4. Listing all persons : <code>list</code></a></li>
 <li><a href="#editing-a-person-code-edit-code">3.5. Editing a person : <code>edit</code></a></li>
 <li><a href="#rating-a-person-code-rate-code-code-since-v1-2-code">3.6. Rating a person : <code>rate</code> <code>[Since v1.2]</code></a></li>
-<li><a href="#locating-persons-by-name-code-find-code-code-since-v1-2-code">3.7. Locating persons by name: <code>find</code> <code>[Since v1.2]</code></a></li>
-<li><a href="#review-an-employee-code-review-code">3.8. Review an employee : <code>review</code></a></li>
-<li><a href="#locating-persons-by-name-code-find-code">3.9. Locating persons by name: <code>find</code></a></li>
-<li><a href="#deleting-a-person-code-delete-code">3.10. Deleting a person : <code>delete</code></a></li>
-<li><a href="#selecting-a-person-code-select-code">3.11. Selecting a person : <code>select</code></a></li>
-<li><a href="#listing-entered-commands-code-history-code">3.12. Listing entered commands : <code>history</code></a></li>
-<li><a href="#undoing-previous-command-code-undo-code">3.13. Undoing previous command : <code>undo</code></a></li>
-<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.14. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#locking-the-employeetracker-temporary-code-lock-code-code-since-v1-2-code">3.15. Locking the EmployeeTracker temporary: <code>lock</code> <code>[Since v1.2]</code></a></li>
-<li><a href="#unlocking-the-employeetracker-code-unlock-code-code-since-v1-2-code">3.16. Unlocking the EmployeeTracker: <code>unlock</code> <code>[Since v1.2]</code></a></li>
-<li><a href="#setting-the-application-unlock-password-code-setpassword-code-code-since-v1-3-code">3.17. Setting the application unlock password: <code>setPassword</code> <code>[Since v1.3]</code></a></li>
-<li><a href="#sorting-the-employees-by-any-existing-field-code-sort-code-code-since-v1-2-code">3.18. Sorting the employees by any existing field: <code>sort</code> <code>[Since v1.2]</code></a></li>
-<li><a href="#adding-an-event-on-one-employee-s-timetable-code-addevent-code-code-since-v1-2-code">3.19. Adding an event on one employee&#8217;s timetable: <code>addEvent</code> <code>[Since v1.2]</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.20. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.21. Exiting the program : <code>exit</code></a></li>
-<li><a href="#user-interface-optimisation">3.22. User Interface optimisation</a></li>
-<li><a href="#saving-the-data">3.23. Saving the data</a></li>
-<li><a href="#searching-employees-by-rating-code-coming-in-v2-0-code">3.24. Searching employees by rating <code>[coming in v2.0]</code></a></li>
-<li><a href="#editing-a-timetable-entry-code-coming-in-v2-0-code">3.25. editing a timetable entry <code>[coming in v2.0]</code></a></li>
-<li><a href="#deleting-a-timetable-entry-code-coming-in-v2-0-code">3.26. deleting a timetable entry <code>[coming in v2.0]</code></a></li>
-<li><a href="#logging-in-code-coming-in-v2-0-code">3.27. Logging in <code>[coming in v2.0]</code></a></li>
-<li><a href="#adding-timetable-entry-in-mass-to-many-employees-timetable-at-once-code-coming-in-v2-0-code">3.28. Adding timetable entry in mass to many employees' timetable at once <code>[coming in v2.0]</code></a></li>
-<li><a href="#having-my-own-timetable-code-coming-in-v2-0-code">3.29. Having my own timetable <code>[coming in v2.0]</code></a></li>
-<li><a href="#jumping-to-email-composing-with-a-command-code-coming-in-v2-0-code">3.30. Jumping to email composing with a command <code>[coming in v2.0]</code></a></li>
-<li><a href="#viewing-my-to-do-list-code-coming-in-v2-0-code">3.31. Viewing my to-do-list <code>[coming in v2.0]</code></a></li>
-<li><a href="#changing-the-window-scheme-theme-skin-code-coming-in-v2-0-code">3.32. Changing the window scheme/theme/skin <code>[coming in v2.0]</code></a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.33. Encrypting data files <code>[coming in v2.0]</code></a></li>
-<li><a href="#exporting-the-data-code-coming-in-v1-4-code">3.34. Exporting the data <code>[coming in v1.4]</code></a></li>
-<li><a href="#importing-the-data-code-coming-in-v1-4-code">3.35. Importing the data <code>[coming in v1.4]</code></a></li>
-<li><a href="#receiving-notification-on-timetable-entry-deadline">3.36. Receiving notification on timetable entry deadline</a></li>
+<li><a href="#reviewing-an-employee-code-review-code-code-since-v1-2-code">3.7. Reviewing an employee : <code>review</code> <code>[Since v1.2]</code></a></li>
+<li><a href="#locating-employees-code-find-code">3.8. Locating employees: <code>find</code></a></li>
+<li><a href="#deleting-a-person-code-delete-code">3.9. Deleting a person : <code>delete</code></a></li>
+<li><a href="#selecting-a-person-code-select-code">3.10. Selecting a person : <code>select</code></a></li>
+<li><a href="#listing-entered-commands-code-history-code">3.11. Listing entered commands : <code>history</code></a></li>
+<li><a href="#undoing-previous-command-code-undo-code">3.12. Undoing previous command : <code>undo</code></a></li>
+<li><a href="#redoing-the-previously-undone-command-code-redo-code">3.13. Redoing the previously undone command : <code>redo</code></a></li>
+<li><a href="#locking-the-employeetracker-temporary-code-lock-code-code-since-v1-2-code">3.14. Locking the EmployeeTracker temporary: <code>lock</code> <code>[Since v1.2]</code></a></li>
+<li><a href="#unlocking-the-employeetracker-code-unlock-code-code-since-v1-2-code">3.15. Unlocking the EmployeeTracker: <code>unlock</code> <code>[Since v1.2]</code></a></li>
+<li><a href="#setting-the-application-unlock-password-code-setpassword-code-code-since-v1-3-code">3.16. Setting the application unlock password: <code>setPassword</code> <code>[Since v1.3]</code></a></li>
+<li><a href="#sorting-the-employees-by-any-existing-field-code-sort-code-code-since-v1-2-code">3.17. Sorting the employees by any existing field: <code>sort</code> <code>[Since v1.2]</code></a></li>
+<li><a href="#adding-an-event-on-one-employee-s-timetable-code-addevent-code-code-since-v1-2-code">3.18. Adding an event on one employee&#8217;s timetable: <code>addEvent</code> <code>[Since v1.2]</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">3.19. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.20. Exiting the program : <code>exit</code></a></li>
+<li><a href="#user-interface-optimisation">3.21. User Interface optimisation</a></li>
+<li><a href="#saving-the-data">3.22. Saving the data</a></li>
+<li><a href="#editing-a-timetable-entry-code-coming-in-v2-0-code">3.23. editing a timetable entry <code>[coming in v2.0]</code></a></li>
+<li><a href="#deleting-a-timetable-entry-code-coming-in-v2-0-code">3.24. deleting a timetable entry <code>[coming in v2.0]</code></a></li>
+<li><a href="#logging-in-code-coming-in-v2-0-code">3.25. Logging in <code>[coming in v2.0]</code></a></li>
+<li><a href="#adding-timetable-entry-in-mass-to-many-employees-timetable-at-once-code-coming-in-v2-0-code">3.26. Adding timetable entry in mass to many employees' timetable at once <code>[coming in v2.0]</code></a></li>
+<li><a href="#having-my-own-timetable-code-coming-in-v2-0-code">3.27. Having my own timetable <code>[coming in v2.0]</code></a></li>
+<li><a href="#jumping-to-email-composing-with-a-command-code-coming-in-v2-0-code">3.28. Jumping to email composing with a command <code>[coming in v2.0]</code></a></li>
+<li><a href="#viewing-my-to-do-list-code-coming-in-v2-0-code">3.29. Viewing my to-do-list <code>[coming in v2.0]</code></a></li>
+<li><a href="#changing-the-window-scheme-theme-skin-code-coming-in-v2-0-code">3.30. Changing the window scheme/theme/skin <code>[coming in v2.0]</code></a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.31. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#exporting-the-data-code-coming-in-v1-4-code">3.32. Exporting the data <code>[coming in v1.4]</code></a></li>
+<li><a href="#importing-the-data-code-coming-in-v1-4-code">3.33. Importing the data <code>[coming in v1.4]</code></a></li>
+<li><a href="#receiving-notification-on-timetable-entry-deadline">3.34. Receiving notification on timetable entry deadline</a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -75,7 +73,10 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Employee Tracker (ET) is for managers who <strong>prefer to use a desktop app for managing his/her subordinates</strong>. More importantly, AB4 is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB4 can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
+<p>Employees Tracker (E.T.) is a <strong>Human Resource Manager</strong> application for managers who <strong>prefer to use a desktop app for managing his/her subordinates</strong>. More importantly, E.T. is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, E.T. can get your employees management tasks done faster than traditional GUI apps.</p>
+</div>
+<div class="paragraph">
+<p>Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
 </div>
 </div>
 </div>
@@ -101,46 +102,55 @@ This app will not work with earlier versions of Java 8.
 </div>
 </li>
 <li>
-<p>Download the latest <code>addressbook.jar</code> <a href="https://github.com/CS2103JAN2018-W15-B1/main/releases">here</a>.</p>
+<p>Download the latest <code>et-employeestracker.jar</code> <a href="https://github.com/CS2103JAN2018-W15-B1/main/releases">here</a>.</p>
 </li>
 <li>
 <p>Copy the file to the folder you want to use as the home folder for your Address Book.</p>
 </li>
 <li>
-<p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
+<p>Double-click the file to start the app. The GUI should appear in a few seconds, as shown in <em>Figure 1</em>.</p>
 <div class="imageblock">
 <div class="content">
 <img src="images/Ui.png" alt="Ui" width="790">
 </div>
+<div class="title">Figure 1. Graphical User Interface (GUI)</div>
 </div>
 </li>
 <li>
 <p>Type the command in the command box and press <kbd>Enter</kbd> to execute it.<br>
 e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> will open the help window.</p>
 </li>
-<li>
+</ol>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
 <p>Some example commands you can try:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong><code>list</code></strong> : lists all contacts</p>
+<p><code>list</code><br>
+lists all employees.</p>
 </li>
 <li>
-<p><strong><code>add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code> : adds a contact named <code>John Doe</code> to the Address Book.</p>
+<p><code>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code><br>
+adds an employee named <code>John Doe</code> to the Employees Tracker.</p>
 </li>
 <li>
-<p><strong><code>delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list</p>
+<p><code>delete 3</code><br>
+deletes the 3rd contact shown in the current list.</p>
 </li>
 <li>
-<p><strong><code>exit</code></strong> : exits the app</p>
+<p><code>exit</code><br>
+exits the app.</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
+<div class="paragraph">
 <p>Refer to <a href="#Features">Section 3, &#8220;Features&#8221;</a> for details of each command.</p>
-</li>
-</ol>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -176,11 +186,11 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <ul>
 <li>
 <p>The Employees Tracker is initially locked when first time open the application, and unlock process is requiered at the beginning.
-Refer to <a href="#unlocking-the-employeetracker-code-unlock-code-code-since-v1-2-code">Section 3.16, &#8220;Unlocking the EmployeeTracker: <code>unlock</code> <code>[Since v1.2]</code>&#8221;</a> for details of <code>unlock</code> command.</p>
+Refer to <a href="#unlocking-the-employeetracker-code-unlock-code-code-since-v1-2-code">Section 3.15, &#8220;Unlocking the EmployeeTracker: <code>unlock</code> <code>[Since v1.2]</code>&#8221;</a> for details of <code>unlock</code> command.</p>
 </li>
 <li>
 <p>The initial default password is 'admin', and it can be changed with <code>setPassword</code> command,
-refer to <a href="#setting-the-application-unlock-password-code-setpassword-code-code-since-v1-3-code">Section 3.17, &#8220;Setting the application unlock password: <code>setPassword</code> <code>[Since v1.3]</code>&#8221;</a> for details of <code>setPassword</code> command.</p>
+refer to <a href="#setting-the-application-unlock-password-code-setpassword-code-code-since-v1-3-code">Section 3.16, &#8220;Setting the application unlock password: <code>setPassword</code> <code>[Since v1.3]</code>&#8221;</a> for details of <code>setPassword</code> command.</p>
 </li>
 </ul>
 </div>
@@ -356,7 +366,7 @@ Format: <code>rate INDEX RATING</code></p>
 <p>Null rating is shown as <code>-</code>.</p>
 </li>
 <li>
-<p>You cannot assign null rating to a person. If you want to revert a person back to null rating, please refer to <a href="#undoing-previous-command-code-undo-code">Section 3.13, &#8220;Undoing previous command : <code>undo</code>&#8221;</a></p>
+<p>You cannot assign null rating to a person. If you want to revert a person back to null rating, please refer to <a href="#undoing-previous-command-code-undo-code">Section 3.12, &#8220;Undoing previous command : <code>undo</code>&#8221;</a></p>
 </li>
 </ul>
 </div>
@@ -383,33 +393,29 @@ Gives the 2nd person in the list of Alex(s) a 2-star rating.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-persons-by-name-code-find-code-code-since-v1-2-code"><a class="link" href="#locating-persons-by-name-code-find-code-code-since-v1-2-code">3.7. Locating persons by name: <code>find</code> <code>[Since v1.2]</code></a></h3>
-
-</div>
-<div class="sect2">
-<h3 id="review-an-employee-code-review-code"><a class="link" href="#review-an-employee-code-review-code">3.8. Review an employee : <code>review</code></a></h3>
+<h3 id="reviewing-an-employee-code-review-code-code-since-v1-2-code"><a class="link" href="#reviewing-an-employee-code-review-code-code-since-v1-2-code">3.7. Reviewing an employee : <code>review</code> <code>[Since v1.2]</code></a></h3>
 <div class="paragraph">
-<p>Updates the review of an existing person in the address book.<br>
-Format: <code>review INDEX u/REVIEWER REVIEW</code></p>
+<p>Assigns a review to an existing employee in the address book.<br>
+Format: <code>review INDEX</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Rates the person at the specified <code>INDEX</code>. The index refers to the index number shown in the last persons listing. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+<p>Rate the employee at the specified <code>INDEX</code>.<br>
+The index refers to the index number shown in the last persons listing.<br>
+The index <strong>must be a positive integer</strong>, i.e. 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>Both INDEX and REVIEW must be provided.</p>
+<p>A pop-up dialog box will appear after user executes the command.<br>
+The dialog box will prompt the user to enter the review.</p>
 </li>
 <li>
-<p>Existing revie will be updated to the input REVIEW.</p>
+<p>The review can contain any character without length limitation.</p>
 </li>
 <li>
-<p>REVIEW can contain any character with no length limitation</p>
-</li>
-<li>
-<p>REVIEW will be tied to a REVIEWER</p>
+<p>A review will be tied to a single reviewer. [Implemented in V1.4]</p>
 </li>
 </ul>
 </div>
@@ -425,7 +431,7 @@ Format: <code>review INDEX u/REVIEWER REVIEW</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>A person will have a null review by default upon added. This implies that the person is yet to be reviewed.</p>
+<p>A employees will have a null review by default upon added. This implies that the employee is yet to be reviewed.</p>
 </li>
 <li>
 <p>Null review is shown as <code>-</code>.</p>
@@ -443,22 +449,24 @@ Format: <code>review INDEX u/REVIEWER REVIEW</code></p>
 <ul>
 <li>
 <p><code>list</code><br>
-<code>review 1 u/John Good Worker</code><br>
-Gives the 1st person in the last persons listing a review "Good Worker".</p>
+<code>review 1</code><br>
+Gives the 1st employee in the last persons listing a review.<br>
+The review will be based on the input in the pop-up dialog box.</p>
 </li>
 <li>
 <p><code>find n/Alex</code><br>
-<code>rate 2 u/John Lazy</code><br>
-Gives the 2nd person in the list of Alex(s) a review "Lazy".</p>
+<code>rate 2</code><br>
+Gives the 2nd employee in the list of Alex(s) a review.<br>
+The review will be based on the input in the pop-up dialog box.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">3.9. Locating persons by name: <code>find</code></a></h3>
+<h3 id="locating-employees-code-find-code"><a class="link" href="#locating-employees-code-find-code">3.8. Locating employees: <code>find</code></a></h3>
 <div class="paragraph">
-<p>Finds persons whose names or tags contain any of the given keywords.<br>
-Format: <code>find (n/NAME_KEYWORDS | t/TAG_KEYWORDS)  [n/MORE_KEYWORDS] [t/MORE_KEYWORDS]</code></p>
+<p>Finds employees whose name, tags, rating, or all of those contain any of the given keyphrases.<br>
+Format: <code>find (n/NAME_KEYPHRASE | t/TAG_KEYPHRASE | r/RATING_KEYPHRASE)  [n/NAME_KEYPHRASE]&#8230;&#8203; [t/TAG_KEYPHRASE]&#8230;&#8203; [r/RATING_KEYPHRASE]&#8230;&#8203;</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -466,20 +474,33 @@ Format: <code>find (n/NAME_KEYWORDS | t/TAG_KEYWORDS)  [n/MORE_KEYWORDS] [t/MORE
 <ul>
 <li>
 <p>The search is case insensitive.<br>
-e.g. <code>n/hans</code> will match <code>Hans</code></p>
+e.g. <code>n/hANs</code> will match <code>Hans</code></p>
 </li>
 <li>
-<p>The order of the keywords does not matter.<br>
+<p>The order of the keyphrase does not matter.<br>
 e.g. <code>n/Hans Bo</code> will match <code>Bo Hans</code></p>
 </li>
 <li>
-<p>Both name and tag are searched (i.e. <code>AND</code> or intersection).<br>
-e.g. <code>n/Hans Bo t/Friends</code>
-will match <code>Hans</code> with tag <code>Friends</code> but not <code>Bo</code> with tag <code>Friends</code> or <code>Hans</code> with tag <code>Enemy</code></p>
+<p>The search does not match exactly all the words in a phrase in sequential order, but only finds any phrase that contains the specified keyphrase&#8217;s words without sequential order.<br>
+e.g. <code>n/Hans Bo</code> will match <code>Jonathan Bo Hans</code></p>
 </li>
 <li>
-<p>Only full words will be matched e.g.<br>
-<code>n/Han</code> will not match <code>Hans</code></p>
+<p>The search only matches full word<br>
+e.g. <code>n/Han</code> will not match <code>Hans</code></p>
+</li>
+<li>
+<p>Searching by multiple criteria will yield the result of employees that match all the criterias.<br>
+e.g.<br></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>n/Hans Bo t/Sales</code> will match <code>Hans Bo</code> with tag <code>Friends</code> but not <code>Hans Bo</code> with tag <code>Enemy</code> or <code>John Doe</code> with tag <code>Friends</code><br></p>
+</li>
+<li>
+<p><code>n/Hans Bo n/John Doe t/Sales t/Marketing</code> will match only <code>Hans Bo | Sales</code> or <code>Hans Bo | Marketing</code> or <code>John Doe | Sales</code> or <code>John Doe | Marketing</code></p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -492,30 +513,34 @@ will match <code>Hans</code> with tag <code>Friends</code> but not <code>Bo</cod
 <ul>
 <li>
 <p><code>find n/John</code><br>
-Returns any person having names <code>John</code>.<br>
+Returns all employees having name <code>John</code>.<br>
 e.g. <code>john</code> and <code>John Doe</code></p>
 </li>
 <li>
 <p><code>find n/Betsy Tim John</code><br>
-Returns any person having names <code>Betsy Tim John</code></p>
+Returns all employees with name that contains <code>Betsy Tim John</code> without any sequential order.<br>
+e.g. <code>Caroline John Tim Betsy</code> and <code>Betsy Tim John</code></p>
 </li>
 <li>
 <p><code>find n/Betsy n/Tim n/John</code><br>
-Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
+Returns all employees with name that contains either <code>Betsy</code>, <code>Tim</code>, or <code>John</code><br>
+e.g. <code>Betsy</code>, <code>Tim</code>, <code>John</code>, <code>Betsy Toe</code>, <code>John Cook</code>, and <code>Tim John</code></p>
 </li>
 <li>
-<p><code>find n/John t/Friends Colleagues</code><br>
-Returns any person having both names <code>John</code> and both tags <code>Friends</code> and <code>Colleagues</code></p>
+<p><code>find n/John t/Friends Colleagues r/3</code><br>
+Returns all employees with name <code>John</code>, both tags <code>Friends</code> and <code>Colleagues</code>, and rating of 3<br>
+e.g. <code>John | Friends, Colleagues | 3</code></p>
 </li>
 <li>
 <p><code>find n/John t/Friends t/Colleagues</code><br>
-Returns any person having both names <code>John</code> and either tags <code>Friends</code> or <code>Colleagues</code></p>
+Returns all employees having both names <code>John</code> and either tags <code>Friends</code> or <code>Colleagues</code><br>
+e.g. <code>John Doe | Friends</code>, <code>John Dick| Colleagues</code>, <code>John | Friends, Colleagues</code>, and <code>John Dare | Friends, Colleagues, OweMoneys</code></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">3.10. Deleting a person : <code>delete</code></a></h3>
+<h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">3.9. Deleting a person : <code>delete</code></a></h3>
 <div class="paragraph">
 <p>Deletes the specified person from the address book.<br>
 Format: <code>delete INDEX</code></p>
@@ -556,7 +581,7 @@ Deletes the 1st person in the results of the <code>find</code> command.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">3.11. Selecting a person : <code>select</code></a></h3>
+<h3 id="selecting-a-person-code-select-code"><a class="link" href="#selecting-a-person-code-select-code">3.10. Selecting a person : <code>select</code></a></h3>
 <div class="paragraph">
 <p>Selects the person identified by the index number used in the last person listing.<br>
 Format: <code>select INDEX</code></p>
@@ -597,7 +622,7 @@ Selects the 1st person in the results of the <code>find</code> command.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.12. Listing entered commands : <code>history</code></a></h3>
+<h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">3.11. Listing entered commands : <code>history</code></a></h3>
 <div class="paragraph">
 <p>Lists all the commands that you have entered in reverse chronological order.<br>
 Format: <code>history</code></p>
@@ -618,7 +643,7 @@ Format: <code>history</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.13. Undoing previous command : <code>undo</code></a></h3>
+<h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">3.12. Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
 <p>Restores the address book to the state before the previous <em>undoable</em> command was executed.<br>
 Format: <code>undo</code></p>
@@ -663,7 +688,7 @@ The <code>undo</code> command fails as there are no undoable commands executed p
 </div>
 </div>
 <div class="sect2">
-<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.14. Redoing the previously undone command : <code>redo</code></a></h3>
+<h3 id="redoing-the-previously-undone-command-code-redo-code"><a class="link" href="#redoing-the-previously-undone-command-code-redo-code">3.13. Redoing the previously undone command : <code>redo</code></a></h3>
 <div class="paragraph">
 <p>Reverses the most recent <code>undo</code> command.<br>
 Format: <code>redo</code></p>
@@ -695,7 +720,7 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 </div>
 <div class="sect2">
-<h3 id="locking-the-employeetracker-temporary-code-lock-code-code-since-v1-2-code"><a class="link" href="#locking-the-employeetracker-temporary-code-lock-code-code-since-v1-2-code">3.15. Locking the EmployeeTracker temporary: <code>lock</code> <code>[Since v1.2]</code></a></h3>
+<h3 id="locking-the-employeetracker-temporary-code-lock-code-code-since-v1-2-code"><a class="link" href="#locking-the-employeetracker-temporary-code-lock-code-code-since-v1-2-code">3.14. Locking the EmployeeTracker temporary: <code>lock</code> <code>[Since v1.2]</code></a></h3>
 <div class="paragraph">
 <p>Lock the employee temporary+
 Format: <code>lock</code></p>
@@ -724,7 +749,7 @@ Lock the address book.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="unlocking-the-employeetracker-code-unlock-code-code-since-v1-2-code"><a class="link" href="#unlocking-the-employeetracker-code-unlock-code-code-since-v1-2-code">3.16. Unlocking the EmployeeTracker: <code>unlock</code> <code>[Since v1.2]</code></a></h3>
+<h3 id="unlocking-the-employeetracker-code-unlock-code-code-since-v1-2-code"><a class="link" href="#unlocking-the-employeetracker-code-unlock-code-code-since-v1-2-code">3.15. Unlocking the EmployeeTracker: <code>unlock</code> <code>[Since v1.2]</code></a></h3>
 <div class="paragraph">
 <p>Unlock the EmployeeTracker<br>
 Format: <code>unlock PASSWORD</code></p>
@@ -759,7 +784,7 @@ Unlock the address book with password: 123 (which is also the application&#8217;
 </div>
 </div>
 <div class="sect2">
-<h3 id="setting-the-application-unlock-password-code-setpassword-code-code-since-v1-3-code"><a class="link" href="#setting-the-application-unlock-password-code-setpassword-code-code-since-v1-3-code">3.17. Setting the application unlock password: <code>setPassword</code> <code>[Since v1.3]</code></a></h3>
+<h3 id="setting-the-application-unlock-password-code-setpassword-code-code-since-v1-3-code"><a class="link" href="#setting-the-application-unlock-password-code-setpassword-code-code-since-v1-3-code">3.16. Setting the application unlock password: <code>setPassword</code> <code>[Since v1.3]</code></a></h3>
 <div class="paragraph">
 <p>Set Employees Tracker&#8217;s password<br>
 Format: <code>setPassword OLD_PASSWORD NEW_PASSWORD</code></p>
@@ -794,7 +819,7 @@ Set Employees Tracker&#8217;s password from '123' (current application password)
 </div>
 </div>
 <div class="sect2">
-<h3 id="sorting-the-employees-by-any-existing-field-code-sort-code-code-since-v1-2-code"><a class="link" href="#sorting-the-employees-by-any-existing-field-code-sort-code-code-since-v1-2-code">3.18. Sorting the employees by any existing field: <code>sort</code> <code>[Since v1.2]</code></a></h3>
+<h3 id="sorting-the-employees-by-any-existing-field-code-sort-code-code-since-v1-2-code"><a class="link" href="#sorting-the-employees-by-any-existing-field-code-sort-code-code-since-v1-2-code">3.17. Sorting the employees by any existing field: <code>sort</code> <code>[Since v1.2]</code></a></h3>
 <div class="paragraph">
 <p>Sort existing employees by any field<br>
 Format: <code>sort FIELD</code></p>
@@ -833,7 +858,7 @@ Sort the employees by rating in descending order.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-an-event-on-one-employee-s-timetable-code-addevent-code-code-since-v1-2-code"><a class="link" href="#adding-an-event-on-one-employee-s-timetable-code-addevent-code-code-since-v1-2-code">3.19. Adding an event on one employee&#8217;s timetable: <code>addEvent</code> <code>[Since v1.2]</code></a></h3>
+<h3 id="adding-an-event-on-one-employee-s-timetable-code-addevent-code-code-since-v1-2-code"><a class="link" href="#adding-an-event-on-one-employee-s-timetable-code-addevent-code-code-since-v1-2-code">3.18. Adding an event on one employee&#8217;s timetable: <code>addEvent</code> <code>[Since v1.2]</code></a></h3>
 <div class="paragraph">
 <p>Add an event to the employee identified by the index number used in the last person listing.<br>
 Format: <code>addEvent INDEX title/TITLE loca/LOCATION stime/STRATTIME etime/ENDTIME descrip/DESCRIPTION</code></p>
@@ -869,21 +894,21 @@ Adds the event to 2nd employee&#8217;s timetable in the list.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.20. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.19. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
 <p>Clears all entries from the address book.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.21. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.20. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="user-interface-optimisation"><a class="link" href="#user-interface-optimisation">3.22. User Interface optimisation</a></h3>
+<h3 id="user-interface-optimisation"><a class="link" href="#user-interface-optimisation">3.21. User Interface optimisation</a></h3>
 <div class="paragraph">
 <p>User will receive alert message in red colours when typing in an illegal message</p>
 </div>
@@ -892,106 +917,72 @@ Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.23. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.22. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="searching-employees-by-rating-code-coming-in-v2-0-code"><a class="link" href="#searching-employees-by-rating-code-coming-in-v2-0-code">3.24. Searching employees by rating <code>[coming in v2.0]</code></a></h3>
+<h3 id="editing-a-timetable-entry-code-coming-in-v2-0-code"><a class="link" href="#editing-a-timetable-entry-code-coming-in-v2-0-code">3.23. editing a timetable entry <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="editing-a-timetable-entry-code-coming-in-v2-0-code"><a class="link" href="#editing-a-timetable-entry-code-coming-in-v2-0-code">3.25. editing a timetable entry <code>[coming in v2.0]</code></a></h3>
+<h3 id="deleting-a-timetable-entry-code-coming-in-v2-0-code"><a class="link" href="#deleting-a-timetable-entry-code-coming-in-v2-0-code">3.24. deleting a timetable entry <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="deleting-a-timetable-entry-code-coming-in-v2-0-code"><a class="link" href="#deleting-a-timetable-entry-code-coming-in-v2-0-code">3.26. deleting a timetable entry <code>[coming in v2.0]</code></a></h3>
+<h3 id="logging-in-code-coming-in-v2-0-code"><a class="link" href="#logging-in-code-coming-in-v2-0-code">3.25. Logging in <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="logging-in-code-coming-in-v2-0-code"><a class="link" href="#logging-in-code-coming-in-v2-0-code">3.27. Logging in <code>[coming in v2.0]</code></a></h3>
+<h3 id="adding-timetable-entry-in-mass-to-many-employees-timetable-at-once-code-coming-in-v2-0-code"><a class="link" href="#adding-timetable-entry-in-mass-to-many-employees-timetable-at-once-code-coming-in-v2-0-code">3.26. Adding timetable entry in mass to many employees' timetable at once <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="adding-timetable-entry-in-mass-to-many-employees-timetable-at-once-code-coming-in-v2-0-code"><a class="link" href="#adding-timetable-entry-in-mass-to-many-employees-timetable-at-once-code-coming-in-v2-0-code">3.28. Adding timetable entry in mass to many employees' timetable at once <code>[coming in v2.0]</code></a></h3>
+<h3 id="having-my-own-timetable-code-coming-in-v2-0-code"><a class="link" href="#having-my-own-timetable-code-coming-in-v2-0-code">3.27. Having my own timetable <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="having-my-own-timetable-code-coming-in-v2-0-code"><a class="link" href="#having-my-own-timetable-code-coming-in-v2-0-code">3.29. Having my own timetable <code>[coming in v2.0]</code></a></h3>
+<h3 id="jumping-to-email-composing-with-a-command-code-coming-in-v2-0-code"><a class="link" href="#jumping-to-email-composing-with-a-command-code-coming-in-v2-0-code">3.28. Jumping to email composing with a command <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="jumping-to-email-composing-with-a-command-code-coming-in-v2-0-code"><a class="link" href="#jumping-to-email-composing-with-a-command-code-coming-in-v2-0-code">3.30. Jumping to email composing with a command <code>[coming in v2.0]</code></a></h3>
+<h3 id="viewing-my-to-do-list-code-coming-in-v2-0-code"><a class="link" href="#viewing-my-to-do-list-code-coming-in-v2-0-code">3.29. Viewing my to-do-list <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="viewing-my-to-do-list-code-coming-in-v2-0-code"><a class="link" href="#viewing-my-to-do-list-code-coming-in-v2-0-code">3.31. Viewing my to-do-list <code>[coming in v2.0]</code></a></h3>
+<h3 id="changing-the-window-scheme-theme-skin-code-coming-in-v2-0-code"><a class="link" href="#changing-the-window-scheme-theme-skin-code-coming-in-v2-0-code">3.30. Changing the window scheme/theme/skin <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="changing-the-window-scheme-theme-skin-code-coming-in-v2-0-code"><a class="link" href="#changing-the-window-scheme-theme-skin-code-coming-in-v2-0-code">3.32. Changing the window scheme/theme/skin <code>[coming in v2.0]</code></a></h3>
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.31. Encrypting data files <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.33. Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<h3 id="exporting-the-data-code-coming-in-v1-4-code"><a class="link" href="#exporting-the-data-code-coming-in-v1-4-code">3.32. Exporting the data <code>[coming in v1.4]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="exporting-the-data-code-coming-in-v1-4-code"><a class="link" href="#exporting-the-data-code-coming-in-v1-4-code">3.34. Exporting the data <code>[coming in v1.4]</code></a></h3>
-<div class="paragraph">
-<p>Export entries from last person listing of the address book.<br>
-Format: <code>export PATH</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>list</code><br>
-<code>export ./all</code><br>
-Export all entries in the address book into <code>./all.ser</code></p>
-</li>
-<li>
-<p><code>find n/Alex</code><br>
-<code>export ./alex</code><br>
-Export entries in the list of Alex(s) into <code>./alex.ser</code></p>
-</li>
-</ul>
-</div>
+<h3 id="importing-the-data-code-coming-in-v1-4-code"><a class="link" href="#importing-the-data-code-coming-in-v1-4-code">3.33. Importing the data <code>[coming in v1.4]</code></a></h3>
+
 </div>
 <div class="sect2">
-<h3 id="importing-the-data-code-coming-in-v1-4-code"><a class="link" href="#importing-the-data-code-coming-in-v1-4-code">3.35. Importing the data <code>[coming in v1.4]</code></a></h3>
-<div class="paragraph">
-<p>Import from an external filesystem.<br>
-Format: <code>import PATH</code></p>
-</div>
-<div class="paragraph">
-<p>Examples:</p>
-</div>
-<div class="paragraph">
-<p><code>import ./all</code><br>
-Import entries of the address book from <code>./all.ser</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="receiving-notification-on-timetable-entry-deadline"><a class="link" href="#receiving-notification-on-timetable-entry-deadline">3.36. Receiving notification on timetable entry deadline</a></h3>
+<h3 id="receiving-notification-on-timetable-entry-deadline"><a class="link" href="#receiving-notification-on-timetable-entry-deadline">3.34. Receiving notification on timetable entry deadline</a></h3>
 <div class="sect3">
-<h4 id="receiving-notification-in-app"><a class="link" href="#receiving-notification-in-app">3.36.1. Receiving notification in app</a></h4>
+<h4 id="receiving-notification-in-app"><a class="link" href="#receiving-notification-in-app">3.34.1. Receiving notification in app</a></h4>
 <div class="paragraph">
 <p>In EmployeeTracker, a notification card will pop up when a timetable entry expires.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="receiving-information-via-windows"><a class="link" href="#receiving-information-via-windows">3.36.2. Receiving information via Windows</a></h4>
+<h4 id="receiving-information-via-windows"><a class="link" href="#receiving-information-via-windows">3.34.2. Receiving information via Windows</a></h4>
 <div class="paragraph">
 <p>In Windows 10 OS computers,even if you minimize the app, you will still receive notifications on timetable entry expiry through Windows notification sender.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="receiving-a-list-of-notifications-in-a-sub-window"><a class="link" href="#receiving-a-list-of-notifications-in-a-sub-window">3.36.3. Receiving a list of notifications in a sub-window</a></h4>
+<h4 id="receiving-a-list-of-notifications-in-a-sub-window"><a class="link" href="#receiving-a-list-of-notifications-in-a-sub-window">3.34.3. Receiving a list of notifications in a sub-window</a></h4>
 <div class="paragraph">
 <p>Suppose you close or minimize the EmployeeTracker, and you missed some notifications on timetable entries expiry.</p>
 </div>
@@ -1048,8 +1039,12 @@ e.g. <code>delete 3</code></p>
 e.g. <code>edit 2 n/James Lee e/jameslee@example.com</code></p>
 </li>
 <li>
-<p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>find James Jake</code></p>
+<p><strong>Review</strong> : <code>review INDEX</code><br>
+e.g. <code>review 2</code></p>
+</li>
+<li>
+<p><strong>Find</strong> : <code>find (n/NAME_KEYPHRASE | t/TAG_KEYPHRASE | r/RATING_KEYPHRASE) [n/NAME_KEYPHRASE]…​ [t/TAG_KEYPHRASE]…​ [r/RATING_KEYPHRASE]…</code><br>
+e.g. <code>find n/James n/Jake Black t/Sales t/Marketing Senior r/3</code></p>
 </li>
 <li>
 <p><strong>List</strong> : <code>list</code></p>
@@ -1077,7 +1072,7 @@ e.g.<code>select 2</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-03-26 07:55:45 UTC
+Last updated 2018-03-26 16:48:44 UTC
 </div>
 </div>
 </body>
