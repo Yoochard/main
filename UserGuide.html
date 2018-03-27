@@ -49,19 +49,20 @@
 <li><a href="#clearing-all-entries-code-clear-code">3.19. Clearing all entries : <code>clear</code></a></li>
 <li><a href="#exiting-the-program-code-exit-code">3.20. Exiting the program : <code>exit</code></a></li>
 <li><a href="#user-interface-optimisation">3.21. User Interface optimisation</a></li>
-<li><a href="#saving-the-data">3.22. Saving the data</a></li>
-<li><a href="#editing-a-timetable-entry-code-coming-in-v2-0-code">3.23. editing a timetable entry <code>[coming in v2.0]</code></a></li>
-<li><a href="#deleting-a-timetable-entry-code-coming-in-v2-0-code">3.24. deleting a timetable entry <code>[coming in v2.0]</code></a></li>
-<li><a href="#logging-in-code-coming-in-v2-0-code">3.25. Logging in <code>[coming in v2.0]</code></a></li>
-<li><a href="#adding-timetable-entry-in-mass-to-many-employees-timetable-at-once-code-coming-in-v2-0-code">3.26. Adding timetable entry in mass to many employees' timetable at once <code>[coming in v2.0]</code></a></li>
-<li><a href="#having-my-own-timetable-code-coming-in-v2-0-code">3.27. Having my own timetable <code>[coming in v2.0]</code></a></li>
-<li><a href="#jumping-to-email-composing-with-a-command-code-coming-in-v2-0-code">3.28. Jumping to email composing with a command <code>[coming in v2.0]</code></a></li>
-<li><a href="#viewing-my-to-do-list-code-coming-in-v2-0-code">3.29. Viewing my to-do-list <code>[coming in v2.0]</code></a></li>
-<li><a href="#changing-the-window-scheme-theme-skin-code-coming-in-v2-0-code">3.30. Changing the window scheme/theme/skin <code>[coming in v2.0]</code></a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.31. Encrypting data files <code>[coming in v2.0]</code></a></li>
-<li><a href="#exporting-the-data-code-coming-in-v1-4-code">3.32. Exporting the data <code>[coming in v1.4]</code></a></li>
-<li><a href="#importing-the-data-code-coming-in-v1-4-code">3.33. Importing the data <code>[coming in v1.4]</code></a></li>
-<li><a href="#receiving-notification-on-timetable-entry-deadline">3.34. Receiving notification on timetable entry deadline</a></li>
+<li><a href="#changing-the-theme-code-changetheme-code">3.22. Changing the theme : <code>changeTheme</code></a></li>
+<li><a href="#saving-the-data">3.23. Saving the data</a></li>
+<li><a href="#editing-a-timetable-entry-code-coming-in-v2-0-code">3.24. editing a timetable entry <code>[coming in v2.0]</code></a></li>
+<li><a href="#deleting-a-timetable-entry-code-coming-in-v2-0-code">3.25. deleting a timetable entry <code>[coming in v2.0]</code></a></li>
+<li><a href="#logging-in-code-coming-in-v2-0-code">3.26. Logging in <code>[coming in v2.0]</code></a></li>
+<li><a href="#adding-timetable-entry-in-mass-to-many-employees-timetable-at-once-code-coming-in-v2-0-code">3.27. Adding timetable entry in mass to many employees' timetable at once <code>[coming in v2.0]</code></a></li>
+<li><a href="#having-my-own-timetable-code-coming-in-v2-0-code">3.28. Having my own timetable <code>[coming in v2.0]</code></a></li>
+<li><a href="#jumping-to-email-composing-with-a-command-code-coming-in-v2-0-code">3.29. Jumping to email composing with a command <code>[coming in v2.0]</code></a></li>
+<li><a href="#viewing-my-to-do-list-code-coming-in-v2-0-code">3.30. Viewing my to-do-list <code>[coming in v2.0]</code></a></li>
+<li><a href="#changing-the-window-scheme-theme-skin-code-coming-in-v2-0-code">3.31. Changing the window scheme/theme/skin <code>[coming in v2.0]</code></a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.32. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#exporting-the-data-code-coming-in-v1-4-code">3.33. Exporting the data <code>[coming in v1.4]</code></a></li>
+<li><a href="#importing-the-data-code-coming-in-v1-4-code">3.34. Importing the data <code>[coming in v1.4]</code></a></li>
+<li><a href="#receiving-notification-on-timetable-entry-deadline">3.35. Receiving notification on timetable entry deadline</a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -917,72 +918,90 @@ Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.22. Saving the data</a></h3>
+<h3 id="changing-the-theme-code-changetheme-code"><a class="link" href="#changing-the-theme-code-changetheme-code">3.22. Changing the theme : <code>changeTheme</code></a></h3>
+<div class="paragraph">
+<p>Change the theme to "dark" or "bright".<br>
+Format: <code>changeTheme THEME_CATEGORY</code></p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>changeTheme bright</code><br>
+Set Employees Tracker&#8217;s theme to be bright theme.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.23. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-timetable-entry-code-coming-in-v2-0-code"><a class="link" href="#editing-a-timetable-entry-code-coming-in-v2-0-code">3.23. editing a timetable entry <code>[coming in v2.0]</code></a></h3>
+<h3 id="editing-a-timetable-entry-code-coming-in-v2-0-code"><a class="link" href="#editing-a-timetable-entry-code-coming-in-v2-0-code">3.24. editing a timetable entry <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="deleting-a-timetable-entry-code-coming-in-v2-0-code"><a class="link" href="#deleting-a-timetable-entry-code-coming-in-v2-0-code">3.24. deleting a timetable entry <code>[coming in v2.0]</code></a></h3>
+<h3 id="deleting-a-timetable-entry-code-coming-in-v2-0-code"><a class="link" href="#deleting-a-timetable-entry-code-coming-in-v2-0-code">3.25. deleting a timetable entry <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="logging-in-code-coming-in-v2-0-code"><a class="link" href="#logging-in-code-coming-in-v2-0-code">3.25. Logging in <code>[coming in v2.0]</code></a></h3>
+<h3 id="logging-in-code-coming-in-v2-0-code"><a class="link" href="#logging-in-code-coming-in-v2-0-code">3.26. Logging in <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="adding-timetable-entry-in-mass-to-many-employees-timetable-at-once-code-coming-in-v2-0-code"><a class="link" href="#adding-timetable-entry-in-mass-to-many-employees-timetable-at-once-code-coming-in-v2-0-code">3.26. Adding timetable entry in mass to many employees' timetable at once <code>[coming in v2.0]</code></a></h3>
+<h3 id="adding-timetable-entry-in-mass-to-many-employees-timetable-at-once-code-coming-in-v2-0-code"><a class="link" href="#adding-timetable-entry-in-mass-to-many-employees-timetable-at-once-code-coming-in-v2-0-code">3.27. Adding timetable entry in mass to many employees' timetable at once <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="having-my-own-timetable-code-coming-in-v2-0-code"><a class="link" href="#having-my-own-timetable-code-coming-in-v2-0-code">3.27. Having my own timetable <code>[coming in v2.0]</code></a></h3>
+<h3 id="having-my-own-timetable-code-coming-in-v2-0-code"><a class="link" href="#having-my-own-timetable-code-coming-in-v2-0-code">3.28. Having my own timetable <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="jumping-to-email-composing-with-a-command-code-coming-in-v2-0-code"><a class="link" href="#jumping-to-email-composing-with-a-command-code-coming-in-v2-0-code">3.28. Jumping to email composing with a command <code>[coming in v2.0]</code></a></h3>
+<h3 id="jumping-to-email-composing-with-a-command-code-coming-in-v2-0-code"><a class="link" href="#jumping-to-email-composing-with-a-command-code-coming-in-v2-0-code">3.29. Jumping to email composing with a command <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="viewing-my-to-do-list-code-coming-in-v2-0-code"><a class="link" href="#viewing-my-to-do-list-code-coming-in-v2-0-code">3.29. Viewing my to-do-list <code>[coming in v2.0]</code></a></h3>
+<h3 id="viewing-my-to-do-list-code-coming-in-v2-0-code"><a class="link" href="#viewing-my-to-do-list-code-coming-in-v2-0-code">3.30. Viewing my to-do-list <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="changing-the-window-scheme-theme-skin-code-coming-in-v2-0-code"><a class="link" href="#changing-the-window-scheme-theme-skin-code-coming-in-v2-0-code">3.30. Changing the window scheme/theme/skin <code>[coming in v2.0]</code></a></h3>
+<h3 id="changing-the-window-scheme-theme-skin-code-coming-in-v2-0-code"><a class="link" href="#changing-the-window-scheme-theme-skin-code-coming-in-v2-0-code">3.31. Changing the window scheme/theme/skin <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.31. Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.32. Encrypting data files <code>[coming in v2.0]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="exporting-the-data-code-coming-in-v1-4-code"><a class="link" href="#exporting-the-data-code-coming-in-v1-4-code">3.32. Exporting the data <code>[coming in v1.4]</code></a></h3>
+<h3 id="exporting-the-data-code-coming-in-v1-4-code"><a class="link" href="#exporting-the-data-code-coming-in-v1-4-code">3.33. Exporting the data <code>[coming in v1.4]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="importing-the-data-code-coming-in-v1-4-code"><a class="link" href="#importing-the-data-code-coming-in-v1-4-code">3.33. Importing the data <code>[coming in v1.4]</code></a></h3>
+<h3 id="importing-the-data-code-coming-in-v1-4-code"><a class="link" href="#importing-the-data-code-coming-in-v1-4-code">3.34. Importing the data <code>[coming in v1.4]</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="receiving-notification-on-timetable-entry-deadline"><a class="link" href="#receiving-notification-on-timetable-entry-deadline">3.34. Receiving notification on timetable entry deadline</a></h3>
+<h3 id="receiving-notification-on-timetable-entry-deadline"><a class="link" href="#receiving-notification-on-timetable-entry-deadline">3.35. Receiving notification on timetable entry deadline</a></h3>
 <div class="sect3">
-<h4 id="receiving-notification-in-app"><a class="link" href="#receiving-notification-in-app">3.34.1. Receiving notification in app</a></h4>
+<h4 id="receiving-notification-in-app"><a class="link" href="#receiving-notification-in-app">3.35.1. Receiving notification in app</a></h4>
 <div class="paragraph">
 <p>In EmployeeTracker, a notification card will pop up when a timetable entry expires.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="receiving-information-via-windows"><a class="link" href="#receiving-information-via-windows">3.34.2. Receiving information via Windows</a></h4>
+<h4 id="receiving-information-via-windows"><a class="link" href="#receiving-information-via-windows">3.35.2. Receiving information via Windows</a></h4>
 <div class="paragraph">
 <p>In Windows 10 OS computers,even if you minimize the app, you will still receive notifications on timetable entry expiry through Windows notification sender.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="receiving-a-list-of-notifications-in-a-sub-window"><a class="link" href="#receiving-a-list-of-notifications-in-a-sub-window">3.34.3. Receiving a list of notifications in a sub-window</a></h4>
+<h4 id="receiving-a-list-of-notifications-in-a-sub-window"><a class="link" href="#receiving-a-list-of-notifications-in-a-sub-window">3.35.3. Receiving a list of notifications in a sub-window</a></h4>
 <div class="paragraph">
 <p>Suppose you close or minimize the EmployeeTracker, and you missed some notifications on timetable entries expiry.</p>
 </div>
@@ -1072,7 +1091,7 @@ e.g.<code>select 2</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-03-27 13:09:26 UTC
+Last updated 2018-03-27 14:55:21 UTC
 </div>
 </div>
 </body>
