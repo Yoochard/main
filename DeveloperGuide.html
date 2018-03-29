@@ -27,8 +27,8 @@
 <li><a href="#setting-up">1. Setting up</a>
 <ul class="sectlevel2">
 <li><a href="#prerequisites">1.1. Prerequisites</a></li>
-<li><a href="#setting-up-the-project-in-your-computer">1.2. Setting up the project in your computer</a></li>
-<li><a href="#verifying-the-setup">1.3. Verifying the setup</a></li>
+<li><a href="#instructions-for-setting-up-the-project-in-your-computer">1.2. Instructions for setting up the project in your computer</a></li>
+<li><a href="#verification-of-the-setup">1.3. Verification of the setup</a></li>
 <li><a href="#configurations-to-do-before-writing-code">1.4. Configurations to do before writing code</a></li>
 </ul>
 </li>
@@ -46,13 +46,13 @@
 <ul class="sectlevel2">
 <li><a href="#undo-redo-feature">3.1. Undo/Redo feature</a></li>
 <li><a href="#manipulating-the-rating-field">3.2. Manipulating the Rating field</a></li>
-<li><a href="#editing-and-rating-a-person">3.3. Editing and rating a person</a></li>
+<li><a href="#edit-and-rate-a-person">3.3. Edit and rate a person</a></li>
 <li><a href="#review-system">3.4. Review system</a></li>
-<li><a href="#reviewing-a-person">3.5. Reviewing a person</a></li>
+<li><a href="#review-a-person">3.5. Review a person</a></li>
 <li><a href="#lock-and-unlock-the-application">3.6. Lock and unlock the application</a></li>
-<li><a href="#every-employee-has-own-timetable">3.7. Every employee has own timetable</a></li>
+<li><a href="#assign-a-timetable-to-every-employee">3.7. Assign a timetable to every employee</a></li>
 <li><a href="#add-events-on-anyone-s-timetable">3.8. Add events on anyone&#8217;s timetable</a></li>
-<li><a href="#proposed-data-encryption">3.9. [Proposed] Data Encryption</a></li>
+<li><a href="#show-notifications-about-expired-events">3.9. Show notifications about expired events</a></li>
 <li><a href="#sort-existing-employees">3.10. Sort existing employees</a></li>
 <li><a href="#change-theme-of-employees-tracker">3.11. Change theme of Employees Tracker</a></li>
 <li><a href="#logging">3.12. Logging</a></li>
@@ -148,7 +148,7 @@ Do not disable them. If you have disabled them, go to <code>File</code> &gt; <co
 </div>
 </div>
 <div class="sect2">
-<h3 id="setting-up-the-project-in-your-computer"><a class="link" href="#setting-up-the-project-in-your-computer">1.2. Setting up the project in your computer</a></h3>
+<h3 id="instructions-for-setting-up-the-project-in-your-computer"><a class="link" href="#instructions-for-setting-up-the-project-in-your-computer">1.2. Instructions for setting up the project in your computer</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -190,7 +190,7 @@ This will generate all resources required by the application and tests.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="verifying-the-setup"><a class="link" href="#verifying-the-setup">1.3. Verifying the setup</a></h3>
+<h3 id="verification-of-the-setup"><a class="link" href="#verification-of-the-setup">1.3. Verification of the setup</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -887,7 +887,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-and-rating-a-person"><a class="link" href="#editing-and-rating-a-person">3.3. Editing and rating a person</a></h3>
+<h3 id="edit-and-rate-a-person"><a class="link" href="#edit-and-rate-a-person">3.3. Edit and rate a person</a></h3>
 <div class="paragraph">
 <p><code>edit</code> command and <code>rate</code> command are implemented in a similar manner. They both involve modifying the field(s) of a person. The only difference is that <code>rate</code> can only change the <code>Rating</code> field, but <code>edit</code> can be used to change any field.</p>
 </div>
@@ -943,7 +943,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 </div>
 <div class="sect2">
-<h3 id="reviewing-a-person"><a class="link" href="#reviewing-a-person">3.5. Reviewing a person</a></h3>
+<h3 id="review-a-person"><a class="link" href="#review-a-person">3.5. Review a person</a></h3>
 <div class="paragraph">
 <p>Currently <code>review</code> command and <code>rate</code> command are implemented in a similar manner, and hence <code>review</code> command and <code>edit</code> command are also implemented in a similar manner.</p>
 </div>
@@ -1063,7 +1063,7 @@ if they are the same, unlock the application, otherwise, inform incorrect passwo
 </div>
 </div>
 <div class="sect2">
-<h3 id="every-employee-has-own-timetable"><a class="link" href="#every-employee-has-own-timetable">3.7. Every employee has own timetable</a></h3>
+<h3 id="assign-a-timetable-to-every-employee"><a class="link" href="#assign-a-timetable-to-every-employee">3.7. Assign a timetable to every employee</a></h3>
 <div class="paragraph">
 <p>To implement the timetables for employees, we use a third party source which is Google Calendar API. With this API, we
 can integrate the application with Google Calendar, and achieve things liking creating events as what we usually do on
@@ -1116,9 +1116,215 @@ the logic component:<br></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.9. [Proposed] Data Encryption</a></h3>
+<h3 id="show-notifications-about-expired-events"><a class="link" href="#show-notifications-about-expired-events">3.9. Show notifications about expired events</a></h3>
 <div class="paragraph">
-<p><em>{Explain here how the data encryption feature will be implemented}</em></p>
+<p>This section discusses about the implementation of the notification feature of Employee Tracker.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+All usages of the word <code>Event</code> in this section refers to the class <code>com.google.api.services.calendar.model.Event</code>,
+not to be confused with Event classes in commons package which will be referred in their full name,
+e.g. BaseEvent, AddressBookChangedEvent.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">3.9.1. Current Implementation</a></h4>
+<div class="paragraph">
+<p>In the current implementation, the <code>AddressBook</code> class saves a list of <code>Notification</code>.</p>
+</div>
+<div class="paragraph">
+<p>When adding a new <code>Notification</code>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>An <code>Event</code> is created.</p>
+</li>
+<li>
+<p><code>ModelManager</code> to add the <code>Notification</code> into the <code>Notifications</code> list in <code>AddressBook</code>.</p>
+</li>
+<li>
+<p><code>Model Manager</code> raises a <code>AddressBookChangedEvent</code> and <code>NotificationAddedEvent</code> after adding the Notification.</p>
+</li>
+<li>
+<p><code>AddressBookChangedEvent</code> and <code>NotificationAddedEvent</code> are handled:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Storage Manager</code> handles the <code>AddressBookChangedEvent</code> and saves the new list of Notifications.</p>
+</li>
+<li>
+<p><code>Logic Manager</code> handles the  <code>TimetableEntryAddedEvent</code> by adding a new <code>TimerTask</code> into its HashMap of <code>scheduledTimerTasks</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>When showing a <code>Notification Card</code> in UI:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The <code>TimerTask</code> associated with the <code>Notification</code> expires.</p>
+</li>
+<li>
+<p><code>LogicManager</code> raises a <code>ShowNotificationEvent</code> and <code>RequestToDeleteTimeTableEvent</code>.</p>
+</li>
+<li>
+<p>UiManager handles the <code>ShowNotificationEvent</code> by showing the notification to user.</p>
+</li>
+<li>
+<p><code>ModelManager</code> handles the <code>RequestToDeleteTimeTableEvent</code> by removing the corresponding <code>Notification</code> from the list of Notifications in <code>AddressBook</code>.</p>
+</li>
+<li>
+<p><code>Model Manager</code> raises a <code>AddressBookChangedEvent</code> and <code>NotificationAddedEvent</code> after adding the Notification.</p>
+</li>
+<li>
+<p><code>Storage Manager</code> handles the <code>AddressBookChanged</code> event and saves the new list of Notifications.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Each <code>Event</code> is assigned (and thus) to an employee. In the following discussions, we will use the phrase <code>owner</code> to refer to the employee who is assigned to the <code>Event</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In order to support <code>email</code> and <code>whatsapp</code> command, as well as displaying the <code>owner</code> 's name on the <code>Notification Card</code>, we need access some information of its <code>owner</code>. This is done through the <code>searchEmployeeById</code> mechanism:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>addressBook</code> object has a <code>nextId</code> integer field.</p>
+</li>
+<li>
+<p>Whenever an employee is added, <code>addressBook</code> assigns the <code>nextId</code> to him and increment the <code>nextId</code> field.</p>
+</li>
+<li>
+<p>The <code>Person</code> class has an <code>id</code> field to store the id.</p>
+</li>
+<li>
+<p>When a <code>Notification</code> is created, it has a <code>ownerId</code> field that stores the <code>id</code> of its <code>owner</code>.</p>
+</li>
+<li>
+<p>When the <code>TimerTask</code> associated with the <code>TimetableEntry</code> expires, it will extract the name (and other fields) of the owner using the <code>getNameById()</code> method in <code>ModelManager</code>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.9.2. Design Considerations</a></h4>
+<div class="paragraph">
+<p>There are a couple of aspects with regards to <code>Notification</code> that can be implemented in alternative designs.</p>
+</div>
+<div class="sect4">
+<h5 id="aspect-extracting-a-person-s-information"><a class="link" href="#aspect-extracting-a-person-s-information">Aspect: extracting a Person&#8217;s information</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative1 (current choice)</strong>: <code>searchEmployeeById</code> mechanism</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: provides the latest information even if the <code>Person</code> is edited after the <code>Notification</code> is created.</p>
+</li>
+<li>
+<p>Cons: requires <code>id</code> field to be implemented in <code>Person</code> and <code>AddressBook</code> class, provides wrong information if <code>id</code> is not implemented correctly (e.g. repeated id)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong> Alternative2</strong>: storing the Person&#8217;s Information in <code>Notification</code> class</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: has a simpler implementation</p>
+</li>
+<li>
+<p>Cons: provides wrong information if <code>Person</code> 's information is edited after <code>Notification</code> is created, requires to update <code>Notification</code> when <code>Person</code> is edited, increases coupling</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect-storing-code-event-code-locally"><a class="link" href="#aspect-storing-code-event-code-locally">Aspect: storing <code>Event</code> locally</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative1 (current choice)</strong>: stores a list of <code>Notifications</code> in <code>AddressBook</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: ensures that notification feature remains working when there&#8217;s no internet access, saves storage space as only essential information is saved</p>
+</li>
+<li>
+<p>Cons: has a complicated implementation (creation of <code>Notification</code> class and edit of <code>Person</code> and <code>AddressBook</code> class for <code>searchEmployeeById</code> mechanism)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative2</strong> : stores a list of <code>Event</code> in <code>AddressBook</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: has a simpler implementation (doesn&#8217;t need to implement <code>Notification</code> class)</p>
+</li>
+<li>
+<p>Cons: requires another mechanism for extracting <code>ownerName</code> because <code>Event</code> class does not store <code>ownerName</code>, waste of storage space because <code>Event</code> class contains a lot of information unnecessary for notification feature</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative3</strong> : stores a list of <code>Notifications</code> in <code>Person</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: has a simpler implementation (doesn&#8217;t need to implement <code>searchEmployeeById</code> mechanism)</p>
+</li>
+<li>
+<p>Cons: compromises performance, especially when there are a lot of employees and only a few <code>Notification</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative4</strong> : does not store <code>Event</code> locally (relies on Google calendar service)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: has the simplest implementation (only need to pull data from Google, does not need to create local class), saves storage space as nothing is stored locally</p>
+</li>
+<li>
+<p>Cons: compromises notification feature if there&#8217;s no internet access, requires another mechanism for extracting <code>ownerName</code> because <code>Event</code> class does not store <code>ownerName</code>, compromises performance if internet speed is slow)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -3563,7 +3769,7 @@ Expected: Similar to previous.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-03-29 13:43:31 UTC
+Last updated 2018-03-29 14:52:46 UTC
 </div>
 </div>
 </body>
