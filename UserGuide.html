@@ -55,13 +55,14 @@
 <li><a href="#setting-the-application-unlock-password-code-setpassword-code">4.15. Setting the application unlock password: <code>setPassword</code></a></li>
 <li><a href="#sorting-the-employees-by-any-existing-field-code-sort-code">4.16. Sorting the employees by any existing field: <code>sort</code></a></li>
 <li><a href="#adding-an-event-on-one-employee-s-timetable-code-addevent-code">4.17. Adding an event on one employee&#8217;s timetable: <code>addEvent</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">4.18. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">4.19. Exiting the program : <code>exit</code></a></li>
-<li><a href="#dismissing-a-notification-code-dismiss-code">4.20. Dismissing a notification : <code>dismiss</code></a></li>
-<li><a href="#toggling-the-notification-panel-code-noti-code">4.21. Toggling the notification panel : <code>noti</code></a></li>
-<li><a href="#reminding-an-employee-through-email-code-email-code">4.22. Reminding an employee through email : <code>email</code></a></li>
-<li><a href="#reminding-an-employee-through-whatsapp-code-whatsapp-code">4.23. Reminding an employee through WhatsApp : <code>whatsapp</code></a></li>
-<li><a href="#upcoming-features">4.24. Upcoming features</a></li>
+<li><a href="#deleting-an-event-in-one-employee-s-timetable-code-deleteevent-code">4.18. Deleting an event in one employee&#8217;s timetable: <code>deleteEvent</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">4.19. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">4.20. Exiting the program : <code>exit</code></a></li>
+<li><a href="#dismissing-a-notification-code-dismiss-code">4.21. Dismissing a notification : <code>dismiss</code></a></li>
+<li><a href="#toggling-the-notification-panel-code-noti-code">4.22. Toggling the notification panel : <code>noti</code></a></li>
+<li><a href="#reminding-an-employee-through-email-code-email-code">4.23. Reminding an employee through email : <code>email</code></a></li>
+<li><a href="#reminding-an-employee-through-whatsapp-code-whatsapp-code">4.24. Reminding an employee through WhatsApp : <code>whatsapp</code></a></li>
+<li><a href="#upcoming-features">4.25. Upcoming features</a></li>
 </ul>
 </li>
 <li><a href="#frequently-asked-questions-faq">5. Frequently Asked Questions (FAQ)</a></li>
@@ -1007,7 +1008,7 @@ Sort the employees by rating in descending order.</p>
 <div class="sect2">
 <h3 id="adding-an-event-on-one-employee-s-timetable-code-addevent-code"><a class="link" href="#adding-an-event-on-one-employee-s-timetable-code-addevent-code">4.17. Adding an event on one employee&#8217;s timetable: <code>addEvent</code></a></h3>
 <div class="paragraph">
-<p>Add an event to the employee identified by the index number used in the last employees listing.<br>
+<p>Adds an event to the employee identified by the index number used in the last employees listing.<br>
 Format: <code>addEvent INDEX title/TITLE loca/LOCATION stime/STRATTIME etime/ENDTIME descrip/DESCRIPTION</code></p>
 </div>
 <div class="sidebarblock">
@@ -1041,35 +1042,71 @@ Adds the event to 2nd employee&#8217;s timetable in the list.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">4.18. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="deleting-an-event-in-one-employee-s-timetable-code-deleteevent-code"><a class="link" href="#deleting-an-event-in-one-employee-s-timetable-code-deleteevent-code">4.18. Deleting an event in one employee&#8217;s timetable: <code>deleteEvent</code></a></h3>
+<div class="paragraph">
+<p>Deletes an event with specified title in the timetable of employee identified by the index number used in the last employees listing.<br>
+Format: <code>deleteEvent INDEX TITLE</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>TITLE</code> is a String.</p>
+</li>
+<li>
+<p>The index refers to the index number shown in the most recent listing.</p>
+</li>
+<li>
+<p>The index <strong>must be a positive integer 1, 2, 3,</strong> …​</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>list</code><br>
+<code>deleteEvent 1 some event</code><br>
+Deletes the event with title "some event" in 2nd employee&#8217;s timetable in the list.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">4.19. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
 <p>Clears all entries from the Employees Tracker.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">4.19. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">4.20. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="dismissing-a-notification-code-dismiss-code"><a class="link" href="#dismissing-a-notification-code-dismiss-code">4.20. Dismissing a notification : <code>dismiss</code></a></h3>
+<h3 id="dismissing-a-notification-code-dismiss-code"><a class="link" href="#dismissing-a-notification-code-dismiss-code">4.21. Dismissing a notification : <code>dismiss</code></a></h3>
 <div class="paragraph">
 <p>Dismisses thea notification identified by the index number used in notification cards.<br>
 Format: <code>dismiss INDEX</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="toggling-the-notification-panel-code-noti-code"><a class="link" href="#toggling-the-notification-panel-code-noti-code">4.21. Toggling the notification panel : <code>noti</code></a></h3>
+<h3 id="toggling-the-notification-panel-code-noti-code"><a class="link" href="#toggling-the-notification-panel-code-noti-code">4.22. Toggling the notification panel : <code>noti</code></a></h3>
 <div class="paragraph">
 <p>Shows the notification panel if it is hidden; hides the notification center if it is shown.<br>
 Format: <code>noti</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="reminding-an-employee-through-email-code-email-code"><a class="link" href="#reminding-an-employee-through-email-code-email-code">4.22. Reminding an employee through email : <code>email</code></a></h3>
+<h3 id="reminding-an-employee-through-email-code-email-code"><a class="link" href="#reminding-an-employee-through-email-code-email-code">4.23. Reminding an employee through email : <code>email</code></a></h3>
 <div class="paragraph">
 <p>Opens up the email app of the computer to send a reminder email about the notification identified by the index number used in notification cards.<br>
 Format: <code>email INDEX</code></p>
@@ -1097,7 +1134,7 @@ Format: <code>email INDEX</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="reminding-an-employee-through-whatsapp-code-whatsapp-code"><a class="link" href="#reminding-an-employee-through-whatsapp-code-whatsapp-code">4.23. Reminding an employee through WhatsApp : <code>whatsapp</code></a></h3>
+<h3 id="reminding-an-employee-through-whatsapp-code-whatsapp-code"><a class="link" href="#reminding-an-employee-through-whatsapp-code-whatsapp-code">4.24. Reminding an employee through WhatsApp : <code>whatsapp</code></a></h3>
 <div class="paragraph">
 <p>Opens up the WhatsApp webpage to send a reminder message about the notification identified by the index number used in notification cards.<br>
 Format: <code>whatsapp INDEX</code></p>
@@ -1125,7 +1162,7 @@ Format: <code>whatsapp INDEX</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="upcoming-features"><a class="link" href="#upcoming-features">4.24. Upcoming features</a></h3>
+<h3 id="upcoming-features"><a class="link" href="#upcoming-features">4.25. Upcoming features</a></h3>
 <div class="paragraph">
 <p>Features yet to be implemented. Coming in <code>v2.0</code>.</p>
 </div>
@@ -1182,11 +1219,19 @@ Format: <code>whatsapp INDEX</code></p>
 e.g. <code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague</code></p>
 </li>
 <li>
+<p><strong>AddEvent</strong> : <code>addEvent INDEX title/TITLE loca/LOCATION stime/STRATTIME etime/ENDTIME descrip/DESCRIPTION</code><br>
+e.g. <code>addEvent 2 title/Test Event loca/NUS, Singapore stime/2017-04-09T19:00:00 etime/2018-04-09T21:00:00 descrip/A Test Event</code></p>
+</li>
+<li>
 <p><strong>Clear</strong> : <code>clear</code></p>
 </li>
 <li>
 <p><strong>Delete</strong> : <code>delete INDEX</code><br>
 e.g. <code>delete 3</code></p>
+</li>
+<li>
+<p><strong>DeleteEvent</strong> : <code>deleteEvent INDEX TITLE</code><br>
+e.g. <code>deleteEvent 1 event title</code></p>
 </li>
 <li>
 <p><strong>Edit</strong> : <code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br>
@@ -1204,6 +1249,9 @@ e.g. <code>find n/James n/Jake Black t/Sales t/Marketing Senior r/3</code></p>
 <p><strong>List</strong> : <code>list</code></p>
 </li>
 <li>
+<p><strong>Lock</strong> : <code>lock</code></p>
+</li>
+<li>
 <p><strong>Help</strong> : <code>help</code></p>
 </li>
 <li>
@@ -1211,10 +1259,18 @@ e.g. <code>find n/James n/Jake Black t/Sales t/Marketing Senior r/3</code></p>
 e.g.<code>select 2</code></p>
 </li>
 <li>
+<p><strong>SetPassword</strong> : <code>setPassword OLD_PASSWORD NEW_PASSWORD `<br>
+e.g.`setPassword admin 12345</code></p>
+</li>
+<li>
 <p><strong>History</strong> : <code>history</code></p>
 </li>
 <li>
 <p><strong>Undo</strong> : <code>undo</code></p>
+</li>
+<li>
+<p><strong>Unlock</strong> : <code>unlock PASSWORD</code><br>
+e.g.<code>unlock admin</code></p>
 </li>
 <li>
 <p><strong>Redo</strong> : <code>redo</code></p>
@@ -1226,7 +1282,7 @@ e.g.<code>select 2</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-01 04:08:09 UTC
+Last updated 2018-04-01 04:21:18 UTC
 </div>
 </div>
 </body>
