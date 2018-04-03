@@ -33,7 +33,8 @@
 <li><a href="#features">3. Features</a>
 <ul class="sectlevel2">
 <li><a href="#the-user-interface">3.1. The User Interface</a></li>
-<li><a href="#data-storage">3.2. Data storage</a></li>
+<li><a href="#locked-by-default-system">3.2. Locked-by-default system</a></li>
+<li><a href="#data-storage">3.3. Data storage</a></li>
 </ul>
 </li>
 <li><a href="#Commands">4. Commands</a>
@@ -59,8 +60,8 @@
 <li><a href="#deleting-an-event-in-one-employee-s-timetable-code-deleteevent-code">4.19. Deleting an event in one employee&#8217;s timetable: <code>deleteEvent</code></a></li>
 <li><a href="#clearing-all-entries-code-clear-code">4.20. Clearing all entries : <code>clear</code></a></li>
 <li><a href="#exiting-the-program-code-exit-code">4.21. Exiting the program : <code>exit</code></a></li>
-<li><a href="#dismissing-a-notification-code-dismiss-code">4.22. Dismissing a notification : <code>dismiss</code></a></li>
-<li><a href="#toggling-the-notification-panel-code-noti-code">4.23. Toggling the notification panel : <code>noti</code></a></li>
+<li><a href="#dismissing-a-notification-card-code-dismiss-code">4.22. Dismissing a notification card : <code>dismiss</code></a></li>
+<li><a href="#toggling-the-notification-center-code-noti-code">4.23. Toggling the notification center : <code>noti</code></a></li>
 <li><a href="#reminding-an-employee-through-email-code-email-code">4.24. Reminding an employee through email : <code>email</code></a></li>
 <li><a href="#reminding-an-employee-through-whatsapp-code-whatsapp-code">4.25. Reminding an employee through WhatsApp : <code>whatsapp</code></a></li>
 <li><a href="#upcoming-features">4.26. Upcoming features</a></li>
@@ -78,11 +79,13 @@
 <p>This user guide serves to guide you so that you are able to use utilize Employees Tracker to its fullest extent.</p>
 </div>
 <div class="paragraph">
-<p>Employees Tracker (E.T.) is a <strong>Human Resource Manager</strong> application for managers who <strong>prefer to use a desktop app for managing his/her subordinates</strong>.
-E.T. is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, E.T. can get your employees management tasks done faster than traditional GUI apps.</p>
+<p>Employees Tracker (E.T.) is a <strong>Human Resource Manager</strong> application that helps managers to manage their subordinates. Its has 2 main functionalities: providing information about employees, as well as helping in tracking the tasks assigned to each employee.</p>
 </div>
 <div class="paragraph">
-<p>Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started.</p>
+<p>Its User Interface (UI) is a hybrid of Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI). That said, ET will suit you better if you can type fast and are familiar with CLI.</p>
+</div>
+<div class="paragraph">
+<p>Without further ado, let&#8217;s see what ET can do!  Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started.</p>
 </div>
 </div>
 </div>
@@ -128,7 +131,10 @@ This app will not work with earlier versions of Java 8.
 </div>
 </li>
 <li>
-<p>Type the command in the command box and press <kbd>Enter</kbd> to execute it.<br>
+<p>To use ET, you have to unlock it with the default password "admin". Type <code>unlock admin</code> and press <kbd>Enter</kbd>.</p>
+</li>
+<li>
+<p>After logging in, you can use ET by typing the commands <kbd>Enter</kbd> to execute it.<br>
 e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> will open the help window.</p>
 </li>
 </ol>
@@ -159,7 +165,7 @@ exits the app.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Refer to <a href="#features">Section 3, &#8220;Features&#8221;</a> for details of each command.</p>
+<p>Refer to <a href="#Commands">Section 4, &#8220;Commands&#8221;</a> for details of each command.</p>
 </div>
 </div>
 </div>
@@ -177,15 +183,15 @@ exits the app.</p>
 <div class="sect3">
 <h4 id="knowing-the-components"><a class="link" href="#knowing-the-components">3.1.1. Knowing the components</a></h4>
 <div class="paragraph">
-<p><em>Figure 2</em> shows the 6 major components of the user interface of Employees Tracker:</p>
+<p><em>Figure 2</em> shows the 5 major components of the user interface of Employees Tracker (ET):</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
 <p>Command Box:where you type in commands</p>
 </li>
 <li>
-<p>Result Display Box: where Employees Tracker shows text result to you</p>
+<p>Result Display Box: where ET shows text result to you</p>
 </li>
 <li>
 <p>Employees List Panel: where the list of all employees is shown</p>
@@ -194,12 +200,9 @@ exits the app.</p>
 <p>Employee&#8217;s Profile Panel: where the details of the selected employee is shown</p>
 </li>
 <li>
-<p>Notification cards: where Employees Tracker reminds you about ended events</p>
+<p>Notification cards: where ET reminds you about ended events</p>
 </li>
-<li>
-<p>Notification center: where hidden notification cards are stored</p>
-</li>
-</ol>
+</ul>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -216,13 +219,13 @@ exits the app.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Error messages, if the command you entered does not exists or does not match the pre-defined format.</p>
+<p>Error messages in <span class="red">red</span>, if the command you entered does not exists or does not match the pre-defined format.</p>
 </li>
 <li>
-<p>Hints about the format and usage of the command, if you entered a command in the wrong format.</p>
+<p>Hints about the format and usage of the command in <span class="green">green</span>.</p>
 </li>
 <li>
-<p>Statuses of the Employee Tracker, if your command is processed successfully.</p>
+<p>Statuses of the Employee Tracker in <span class="white">white</span>, if your command is processed successfully.</p>
 </li>
 </ul>
 </div>
@@ -233,52 +236,118 @@ exits the app.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If the result display box shows text in red, it means that you have entered an non-existing command or a command that does not follow its pre-defined format.
+ET will intelligently provide <span class="green">hints</span> according to the words you type in the <code>Command Box</code>.
 </td>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>Different tags will perform different colours for clarification</p>
-</div>
 </div>
 <div class="sect3">
 <h4 id="understanding-the-notification-system"><a class="link" href="#understanding-the-notification-system">3.1.3. Understanding the notification system</a></h4>
-<div class="sect4">
-<h5 id="timing-of-notifications"><a class="link" href="#timing-of-notifications">Timing of notifications</a></h5>
+<div class="sect5">
+<h6 id="notification-cards"><a class="link" href="#notification-cards">Notification cards</a></h6>
 <div class="paragraph">
-<p>There will be 2 notifications for each event, which are:</p>
+<p><em>Figure 3</em> shows a notification card of ET. Each notification card contains 4 information, which are index, event name, name of person in-charge and expiry date and time.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/card_labelled.jpg" alt="card labelled" width="">
+</div>
+<div class="title">Figure 3. A notification card</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="two-phase-notification"><a class="link" href="#two-phase-notification">Two Phase notification</a></h5>
+<div class="paragraph">
+<p>ET has a 2 phase notification system, i.e. there will be 2 notification cards popping up to remind you of each event.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>notification on the day of expiry</p>
+<p>The first phase notification will pop out in a <span class="blue">blue</span> notification card, on the day of expiry, as shown in <em>Figure 4</em>.</p>
 </li>
 <li>
-<p>notification at the time of expiry.</p>
+<p>The second phase notification will pop out in a <span class="red">red</span> notification card, at the exact time of expiry, as shown in <em>Figure 5</em>.</p>
 </li>
 </ul>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="images/card_blue.png" alt="card blue" width="">
+</div>
+<div class="title">Figure 4. First phase notification card</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/card_red.png" alt="card red" width="">
+</div>
+<div class="title">Figure 5. Second phase notification card</div>
+</div>
 <div class="paragraph">
-<p>For example, suppose you have assigned a task to Alex which will due on 27th May 2018 4:00 pm. When you open ET for the first time at 8:00 am on 27th May 2018, you will be notified that Alex has a task that will due on <strong>today</strong> . Later at 4:00 pm of 27th May 2018, you will receive another notification, informing you that Alex should have finished the task by <strong>now</strong> .</p>
+<p>For example, suppose you have assigned a task to Alex which will due on 27th May 2018 4:00 pm. When you open ET for the first time in the morning of 27th May 2018, you will be notified that Alex has a task that will due on <strong>today</strong> in a <span class="blue">blue</span> notification card. Later at 4:00 pm of 27th May 2018, you will receive the second phase notification in <span class="red">red</span>, informing you that Alex should have finished the task by <strong>now</strong> .</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="notification-cards-and-the-notification-center"><a class="link" href="#notification-cards-and-the-notification-center">Notification cards and the Notification Center</a></h5>
+<h5 id="notification-card-in-operating-system"><a class="link" href="#notification-card-in-operating-system">Notification card in Operating System</a></h5>
 <div class="paragraph">
-<p>Notifications are shown in notification cards in ET. Each notification card contains 3 information about the expiring event: title, name of employee in-charge, time of expiry.<br></p>
+<p>We understand that you as a manager lead a busy life, so we don&#8217;t expect you to stare at ET at all times to catch the notification cards. Instead, ET is capable of showing notification cards in your computer&#8217;s system (e.g. Windows, Mac, Linux, etc.) while you are using other software, as shown in <em>Figure 6</em>. Thus, you can feel free to minimize ET and continue working on your computer.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/card_windows.png" alt="card windows" width="">
+</div>
+<div class="title">Figure 6. ET shows notification card about event expiry even if you are using other programs.</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This feature may not work on some computer systems.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="the-notification-center"><a class="link" href="#the-notification-center">The Notification Center</a></h5>
+<div class="paragraph">
+<p>To prevent notification cards from flooding the screen, notification cards in Employees Tracker (ET) will be hidden after 5 seconds.</p>
 </div>
 <div class="paragraph">
-<p>Notification cards will pop into the User Interface of ET from the bottom right corner, and waits 5 seconds before exitting the screen. However, the notification cards aren&#8217;t dismissed. You can still revisit them in the notification center.<br></p>
+<p>However, fret not, you can still find them in the notification center. To open the <code>Notification Center</code>, please refer to <a href="#toggling-the-notification-center-code-noti-code">Section 4.23, &#8220;Toggling the notification center : <code>noti</code>&#8221;</a>, or <strong>double press</strong> <kbd>SHIFT</kbd>. After that, you will be greeted by the <code>Notification Center</code> as shown in <em>Figure 7</em>. In the <code>Notification Center</code>, you will see a list of all un-dismissed notification cards.</p>
 </div>
-<div class="paragraph">
-<p>In the notification center, you can either dismiss a notification, email to remind, and/or whatsapp to remind.</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/notification_center.png" alt="notification center" width="">
+</div>
+<div class="title">Figure 7. The Notification Center</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Notification cards will always stay in the notification center. Even if you close ET, the notification card will re-appear when you open ET again. To dismiss a notification card, please refer to <a href="#dismissing-a-notification-card-code-dismiss-code">Section 4.22, &#8220;Dismissing a notification card : <code>dismiss</code>&#8221;</a>.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="data-storage"><a class="link" href="#data-storage">3.2. Data storage</a></h3>
+<h3 id="locked-by-default-system"><a class="link" href="#locked-by-default-system">3.2. Locked-by-default system</a></h3>
+<div class="paragraph">
+<p>Employees Tracker (ET) is locked by default when it is opened in order to secure the data in ET. While ET is locked, all commands and the notification features will not work. To unlock ET, please refer to <a href="#logging-in-code-unlock-code">Section 4.1, &#8220;Logging in : <code>unlock</code>&#8221;</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="data-storage"><a class="link" href="#data-storage">3.3. Data storage</a></h3>
 <div class="paragraph">
 <p>Employees Tracker data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
@@ -795,6 +864,24 @@ Selects the 1st employee in the results of the <code>find</code> command.</p>
 </li>
 </ul>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the <code>Calendar row</code> of the <code>Employee&#8217;s Profile Panel</code> looks something similar to <em>Figure 8</em>, it means you will have to sign in to your <strong>Google work account</strong> from there. This is because for security purposes, you will be required to sign in once for every time you close Employees Tracker and open it again,
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/sign_in.png" alt="sign in" width="][height="200"">
+</div>
+<div class="title">Figure 8. Signing in to Google account at the Calendar row</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="listing-entered-commands-code-history-code"><a class="link" href="#listing-entered-commands-code-history-code">4.11. Listing entered commands : <code>history</code></a></h3>
@@ -1059,6 +1146,30 @@ Adds the event to 2nd employee&#8217;s timetable in the list.</p>
 </li>
 </ul>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you are using Employees Tracker (ET) for the first time, you will be directed to a web page that requires you to sign in to Google account. Please sign in to your <strong>Google work account</strong>. Then, you will be directed to a web page similar to <em>Figure 9</em>. Please click <code>allow</code>. You can return to ET once you see a message as shown in <em>Figure 10</em>.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/login_prompt.png" alt="login prompt" width="][height="200"">
+</div>
+<div class="title">Figure 9. Process of signing in to Google account for the first time</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/login_done.png" alt="login done" width="][height="200"">
+</div>
+<div class="title">Figure 10. Done signing in</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="deleting-an-event-in-one-employee-s-timetable-code-deleteevent-code"><a class="link" href="#deleting-an-event-in-one-employee-s-timetable-code-deleteevent-code">4.19. Deleting an event in one employee&#8217;s timetable: <code>deleteEvent</code></a></h3>
@@ -1111,17 +1222,29 @@ Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="dismissing-a-notification-code-dismiss-code"><a class="link" href="#dismissing-a-notification-code-dismiss-code">4.22. Dismissing a notification : <code>dismiss</code></a></h3>
+<h3 id="dismissing-a-notification-card-code-dismiss-code"><a class="link" href="#dismissing-a-notification-card-code-dismiss-code">4.22. Dismissing a notification card : <code>dismiss</code></a></h3>
 <div class="paragraph">
-<p>Dismisses thea notification identified by the index number used in notification cards.<br>
+<p>Dismisses the notification card identified by the index number.<br>
 Format: <code>dismiss INDEX</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="toggling-the-notification-panel-code-noti-code"><a class="link" href="#toggling-the-notification-panel-code-noti-code">4.23. Toggling the notification panel : <code>noti</code></a></h3>
+<h3 id="toggling-the-notification-center-code-noti-code"><a class="link" href="#toggling-the-notification-center-code-noti-code">4.23. Toggling the notification center : <code>noti</code></a></h3>
 <div class="paragraph">
 <p>Shows the notification panel if it is hidden; hides the notification center if it is shown.<br>
 Format: <code>noti</code></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Alternatively, you can <strong>double press</strong> <kbd>SHIFT</kbd> to toggle the notification center.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -1304,7 +1427,7 @@ e.g.<code>unlock admin</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-03 16:51:49 UTC
+Last updated 2018-04-03 18:26:30 UTC
 </div>
 </div>
 </body>
