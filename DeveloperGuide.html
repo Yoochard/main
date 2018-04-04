@@ -357,7 +357,7 @@ The <code>.pptx</code> files used to create diagrams in this document can be fou
 <div class="ulist">
 <ul>
 <li>
-<p><code>EventsCenter</code> : This class (written using <a href="https://github.com/google/guava/wiki/EventBusExplained">Google&#8217;s Event Bus library</a>) is used by components to communicate with other components using events (i.e. a form of <em>Event Driven</em> design)</p>
+<p><code>EventsCenter</code> : This class (written using <a href="https://github.com/google/guava/wiki/EventBusExplained">Google&#8217;s Event Bus library</a>) is used by components to communicate with other components using events (i.e. a form of <em>Event Driven</em> design).</p>
 </li>
 <li>
 <p><code>LogsCenter</code> : Used by many classes to write log messages to the App&#8217;s log file.</p>
@@ -762,7 +762,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1 (current choice):</strong> Add a new abstract method <code>executeUndoableCommand()</code></p>
+<p><strong>Alternative 1 (current choice):</strong> Add a new abstract method <code>executeUndoableCommand()</code>.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -775,7 +775,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 </li>
 <li>
-<p><strong>Alternative 2:</strong> Just override <code>execute()</code></p>
+<p><strong>Alternative 2:</strong> Just override <code>execute()</code>.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -862,7 +862,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1 (current choice):</strong> Use separate stack for undo and redo</p>
+<p><strong>Alternative 1 (current choice):</strong> Use separate stack for undo and redo.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -875,7 +875,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 </div>
 </li>
 <li>
-<p><strong>Alternative 2:</strong> Use <code>HistoryManager</code> for undo/redo</p>
+<p><strong>Alternative 2:</strong> Use <code>HistoryManager</code> for undo/redo.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -912,21 +912,21 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Person toEdit</p>
+<p>Person toEdit.</p>
 </li>
 <li>
-<p>Person edited</p>
+<p>Person edited.</p>
 </li>
 <li>
-<p>Parser: EditCommandParser or RateCommandParser</p>
+<p>Parser: EditCommandParser or RateCommandParser.</p>
 </li>
 <li>
-<p>EditPersonDescriptor</p>
+<p>EditPersonDescriptor.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>Since all fields of the <code>Person</code> class are immutable, we need to use <code>edited</code> Person to replace the <code>toEdit</code> Person</p>
+<p>Since all fields of the <code>Person</code> class are immutable, we need to use <code>edited</code> Person to replace the <code>toEdit</code> Person.</p>
 </div>
 <div class="paragraph">
 <p>The details of implementation are as follow:</p>
@@ -943,7 +943,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 <p><code>edited</code> Person will be created, by obtaining the new value for modified fields from <code>EditPersonDescriptor</code>. The value of unmodified field(s) are obtained from <code>toEdit</code> Person.</p>
 </li>
 <li>
-<p><code>edited</code> Person is used to replace <code>toEdit</code> Person in <code>AddressBook</code></p>
+<p><code>edited</code> Person is used to replace <code>toEdit</code> Person in <code>AddressBook</code>.</p>
 </li>
 </ol>
 </div>
@@ -974,21 +974,21 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>Person</code> personToEdit</p>
+<p><code>Person</code> personToEdit.</p>
 </li>
 <li>
-<p><code>Person</code> editedPerson</p>
+<p><code>Person</code> editedPerson.</p>
 </li>
 <li>
-<p><code>Parser</code> ReviewCommandParser</p>
+<p><code>Parser</code> ReviewCommandParser.</p>
 </li>
 <li>
-<p><code>EditPersonDescriptor</code></p>
+<p><code>EditPersonDescriptor</code>.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>Since all fields of the <code>Person</code> class are immutable, we need to use <code>Person</code> <em>editedPerson</em> to replace the <code>Person</code> <em>personToEdit</em></p>
+<p>Since all fields of the <code>Person</code> class are immutable, we need to use <code>Person</code> <em>editedPerson</em> to replace the <code>Person</code> <em>personToEdit</em>.</p>
 </div>
 <div class="paragraph">
 <p>The details of implementation are as follow:</p>
@@ -1006,7 +1006,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 The old <code>Review</code> value is obtained from <code>Person</code> <em>personToEdit</em>.</p>
 </li>
 <li>
-<p><code>Person</code> <em>editedPerson</em> is used to replace <code>Person</code> <em>personToEdit</em> in <code>AddressBook</code></p>
+<p><code>Person</code> <em>editedPerson</em> is used to replace <code>Person</code> <em>personToEdit</em> in <code>AddressBook</code>.</p>
 </li>
 </ol>
 </div>
@@ -1025,19 +1025,19 @@ The old <code>Review</code> value is obtained from <code>Person</code> <em>perso
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Command: LockCommand</p>
+<p>Command: LockCommand.</p>
 </li>
 <li>
-<p>Command: UnlockCommand</p>
+<p>Command: UnlockCommand.</p>
 </li>
 <li>
-<p>CommandParser: LockCommandParser or UnlockCommandParser</p>
+<p>CommandParser: LockCommandParser or UnlockCommandParser.</p>
 </li>
 <li>
-<p>AddressBookParser</p>
+<p>AddressBookParser.</p>
 </li>
 <li>
-<p>LogicManager</p>
+<p>LogicManager.</p>
 </li>
 </ol>
 </div>
@@ -1107,13 +1107,13 @@ the logic component:<br></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Command: TestAddEventCommand</p>
+<p>Command: TestAddEventCommand.</p>
 </li>
 <li>
-<p>CommandParser: TestAddEventCommandParser</p>
+<p>CommandParser: TestAddEventCommandParser.</p>
 </li>
 <li>
-<p>AddressBookParser</p>
+<p>AddressBookParser.</p>
 </li>
 </ol>
 </div>
@@ -1257,27 +1257,27 @@ Each <code>Event</code> is assigned (and thus) to an employee. In the following 
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative1 (current choice)</strong>: <code>searchEmployeeById</code> mechanism</p>
+<p><strong>Alternative1 (current choice)</strong>: <code>searchEmployeeById</code> mechanism.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>Pros: provides the latest information even if the <code>Person</code> is edited after the <code>Notification</code> is created.</p>
 </li>
 <li>
-<p>Cons: requires <code>id</code> field to be implemented in <code>Person</code> and <code>AddressBook</code> class, provides wrong information if <code>id</code> is not implemented correctly (e.g. repeated id)</p>
+<p>Cons: requires <code>id</code> field to be implemented in <code>Person</code> and <code>AddressBook</code> class, provides wrong information if <code>id</code> is not implemented correctly (e.g. repeated id).</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong> Alternative2</strong>: storing the Person&#8217;s Information in <code>Notification</code> class</p>
+<p><strong> Alternative2</strong>: storing the Person&#8217;s Information in <code>Notification</code> class.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: has a simpler implementation</p>
+<p>Pros: has a simpler implementation.</p>
 </li>
 <li>
-<p>Cons: provides wrong information if <code>Person</code> 's information is edited after <code>Notification</code> is created, requires to update <code>Notification</code> when <code>Person</code> is edited, increases coupling</p>
+<p>Cons: provides wrong information if <code>Person</code> 's information is edited after <code>Notification</code> is created, requires to update <code>Notification</code> when <code>Person</code> is edited, increases coupling.</p>
 </li>
 </ul>
 </div>
@@ -1290,53 +1290,53 @@ Each <code>Event</code> is assigned (and thus) to an employee. In the following 
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative1 (current choice)</strong>: stores a list of <code>Notifications</code> in <code>AddressBook</code></p>
+<p><strong>Alternative1 (current choice)</strong>: stores a list of <code>Notifications</code> in <code>AddressBook</code>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: ensures that notification feature remains working when there&#8217;s no internet access, saves storage space as only essential information is saved</p>
+<p>Pros: ensures that notification feature remains working when there&#8217;s no internet access, saves storage space as only essential information is saved.</p>
 </li>
 <li>
-<p>Cons: has a complicated implementation (creation of <code>Notification</code> class and edit of <code>Person</code> and <code>AddressBook</code> class for <code>searchEmployeeById</code> mechanism)</p>
+<p>Cons: has a complicated implementation (creation of <code>Notification</code> class and edit of <code>Person</code> and <code>AddressBook</code> class for <code>searchEmployeeById</code> mechanism).</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Alternative2</strong> : stores a list of <code>Event</code> in <code>AddressBook</code></p>
+<p><strong>Alternative2</strong> : stores a list of <code>Event</code> in <code>AddressBook</code>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: has a simpler implementation (doesn&#8217;t need to implement <code>Notification</code> class)</p>
+<p>Pros: has a simpler implementation (doesn&#8217;t need to implement <code>Notification</code> class).</p>
 </li>
 <li>
-<p>Cons: requires another mechanism for extracting <code>ownerName</code> because <code>Event</code> class does not store <code>ownerName</code>, waste of storage space because <code>Event</code> class contains a lot of information unnecessary for notification feature</p>
+<p>Cons: requires another mechanism for extracting <code>ownerName</code> because <code>Event</code> class does not store <code>ownerName</code>, waste of storage space because <code>Event</code> class contains a lot of information unnecessary for notification feature.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Alternative3</strong> : stores a list of <code>Notifications</code> in <code>Person</code></p>
+<p><strong>Alternative3</strong> : stores a list of <code>Notifications</code> in <code>Person</code>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: has a simpler implementation (doesn&#8217;t need to implement <code>searchEmployeeById</code> mechanism)</p>
+<p>Pros: has a simpler implementation (doesn&#8217;t need to implement <code>searchEmployeeById</code> mechanism).</p>
 </li>
 <li>
-<p>Cons: compromises performance, especially when there are a lot of employees and only a few <code>Notification</code></p>
+<p>Cons: compromises performance, especially when there are a lot of employees and only a few <code>Notification</code>.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Alternative4</strong> : does not store <code>Event</code> locally (relies on Google calendar service)</p>
+<p><strong>Alternative4</strong> : does not store <code>Event</code> locally (relies on Google calendar service).</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: has the simplest implementation (only need to pull data from Google, does not need to create local class), saves storage space as nothing is stored locally</p>
+<p>Pros: has the simplest implementation (only need to pull data from Google, does not need to create local class), saves storage space as nothing is stored locally.</p>
 </li>
 <li>
-<p>Cons: compromises notification feature if there&#8217;s no internet access, requires another mechanism for extracting <code>ownerName</code> because <code>Event</code> class does not store <code>ownerName</code>, compromises performance if internet speed is slow)</p>
+<p>Cons: compromises notification feature if there&#8217;s no internet access, requires another mechanism for extracting <code>ownerName</code> because <code>Event</code> class does not store <code>ownerName</code>, compromises performance if internet speed is slow).</p>
 </li>
 </ul>
 </div>
@@ -1354,13 +1354,13 @@ Each <code>Event</code> is assigned (and thus) to an employee. In the following 
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Command: SortCommand</p>
+<p>Command: SortCommand.</p>
 </li>
 <li>
-<p>Parser: SortCommandParser, AddressBookParser</p>
+<p>Parser: SortCommandParser, AddressBookParser.</p>
 </li>
 <li>
-<p>AddressBook, UniqueEmployeeList</p>
+<p>AddressBook, UniqueEmployeeList.</p>
 </li>
 </ol>
 </div>
@@ -1379,7 +1379,7 @@ Each <code>Event</code> is assigned (and thus) to an employee. In the following 
 <p><code>ModelManager</code> and <code>UniqueEmployeeList</code> provide sorting algorithm, called by <code>AddressBook</code>.</p>
 </li>
 <li>
-<p><code>UniqueEmployeeList</code> will sort the units by giving field</p>
+<p><code>UniqueEmployeeList</code> will sort the units by giving field.</p>
 </li>
 </ol>
 </div>
@@ -1387,15 +1387,15 @@ Each <code>Event</code> is assigned (and thus) to an employee. In the following 
 <div class="sect2">
 <h3 id="change-theme-of-employees-tracker"><a class="link" href="#change-theme-of-employees-tracker">4.11. Change theme of Employees Tracker</a></h3>
 <div class="paragraph">
-<p><code>changeTheme</code> command is used to change the theme to <code>dark</code> or <code>bright</code></p>
+<p><code>changeTheme</code> command is used to change the theme to <code>dark</code> or <code>bright</code>.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>changeTheme</code> is achieved by handling <code>changeThemeEvent</code> in <code>MainWindow</code></p>
+<p><code>changeTheme</code> is achieved by handling <code>changeThemeEvent</code> in <code>MainWindow</code>.</p>
 </li>
 <li>
-<p>a new "theme" field is added in GuiSettings</p>
+<p>a new "theme" field is added in GuiSettings.</p>
 </li>
 </ul>
 </div>
@@ -1408,10 +1408,10 @@ Each <code>Event</code> is assigned (and thus) to an employee. In the following 
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 4.13, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 4.13, &#8220;Configuration&#8221;</a>).</p>
 </li>
 <li>
-<p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
+<p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level.</p>
 </li>
 <li>
 <p>Currently log messages are output through: <code>Console</code> and to a <code>.log</code> file.</p>
@@ -1424,16 +1424,16 @@ Each <code>Event</code> is assigned (and thus) to an employee. In the following 
 <div class="ulist">
 <ul>
 <li>
-<p><code>SEVERE</code> : Critical problem detected which may possibly cause the termination of the application</p>
+<p><code>SEVERE</code> : Critical problem detected which may possibly cause the termination of the application.</p>
 </li>
 <li>
-<p><code>WARNING</code> : Can continue, but with caution</p>
+<p><code>WARNING</code> : Can continue, but with caution.</p>
 </li>
 <li>
-<p><code>INFO</code> : Information showing the noteworthy actions by the App</p>
+<p><code>INFO</code> : Information showing the noteworthy actions by the App.</p>
 </li>
 <li>
-<p><code>FINE</code> : Details that is not usually noteworthy but may be useful in debugging e.g. print the actual list instead of just its size</p>
+<p><code>FINE</code> : Details that is not usually noteworthy but may be useful in debugging e.g. print the actual list instead of just its size.</p>
 </li>
 </ul>
 </div>
@@ -1542,10 +1542,10 @@ The most reliable way to run tests is the 3<sup>rd</sup> one. The first two meth
 <div class="ulist">
 <ul>
 <li>
-<p>To run all tests, right-click on the <code>src/test/java</code> folder and choose <code>Run 'All Tests'</code></p>
+<p>To run all tests, right-click on the <code>src/test/java</code> folder and choose <code>Run 'All Tests'</code>.</p>
 </li>
 <li>
-<p>To run a subset of tests, you can right-click on a test package, test class, or a test and choose <code>Run 'ABC'</code></p>
+<p>To run a subset of tests, you can right-click on a test package, test class, or a test and choose <code>Run 'ABC'</code>.</p>
 </li>
 </ul>
 </div>
@@ -1555,7 +1555,7 @@ The most reliable way to run tests is the 3<sup>rd</sup> one. The first two meth
 <div class="ulist">
 <ul>
 <li>
-<p>Open a console and run the command <code>gradlew clean allTests</code> (Mac/Linux: <code>./gradlew clean allTests</code>)</p>
+<p>Open a console and run the command <code>gradlew clean allTests</code> (Mac/Linux: <code>./gradlew clean allTests</code>).</p>
 </li>
 </ul>
 </div>
@@ -1578,7 +1578,7 @@ See <a href="UsingGradle.html">UsingGradle.adoc</a> for more info on how to run 
 <p>Thanks to the <a href="https://github.com/TestFX/TestFX">TestFX</a> library we use, our GUI tests can be run in the <em>headless</em> mode. In the headless mode, GUI tests do not show up on the screen. That means the developer can do other things on the Computer while the tests are running.</p>
 </div>
 <div class="paragraph">
-<p>To run tests in headless mode, open a console and run the command <code>gradlew clean headless allTests</code> (Mac/Linux: <code>./gradlew clean headless allTests</code>)</p>
+<p>To run tests in headless mode, open a console and run the command <code>gradlew clean headless allTests</code> (Mac/Linux: <code>./gradlew clean headless allTests</code>).</p>
 </div>
 </div>
 <div class="sect2">
@@ -1607,15 +1607,15 @@ See <a href="UsingGradle.html">UsingGradle.adoc</a> for more info on how to run 
 <ol class="loweralpha" type="a">
 <li>
 <p><em>Unit tests</em> targeting the lowest level methods/classes.<br>
-e.g. <code>seedu.address.commons.StringUtilTest</code></p>
+e.g. <code>seedu.address.commons.StringUtilTest</code>.</p>
 </li>
 <li>
 <p><em>Integration tests</em> that are checking the integration of multiple code units (those code units are assumed to be working).<br>
-e.g. <code>seedu.address.storage.StorageManagerTest</code></p>
+e.g. <code>seedu.address.storage.StorageManagerTest</code>.</p>
 </li>
 <li>
 <p>Hybrids of unit and integration tests. These test are checking multiple code units as well as how the are connected together.<br>
-e.g. <code>seedu.address.logic.LogicManagerTest</code></p>
+e.g. <code>seedu.address.logic.LogicManagerTest</code>.</p>
 </li>
 </ol>
 </div>
@@ -1685,7 +1685,7 @@ e.g. <code>seedu.address.logic.LogicManagerTest</code></p>
 <p>Generate a JAR file <a href="UsingGradle.html#creating-the-jar-file">using Gradle</a>.</p>
 </li>
 <li>
-<p>Tag the repo with the version number. e.g. <code>v0.1</code></p>
+<p>Tag the repo with the version number. e.g. <code>v0.1</code>.</p>
 </li>
 <li>
 <p><a href="https://help.github.com/articles/creating-releases/">Create a new release using GitHub</a> and upload the JAR file you created.</p>
@@ -1697,8 +1697,8 @@ e.g. <code>seedu.address.logic.LogicManagerTest</code></p>
 <h3 id="managing-dependencies"><a class="link" href="#managing-dependencies">7.6. Managing Dependencies</a></h3>
 <div class="paragraph">
 <p>A project often depends on third-party libraries. For example, Address Book depends on the <a href="http://wiki.fasterxml.com/JacksonHome">Jackson library</a> for XML parsing. Managing these <em>dependencies</em> can be automated using Gradle. For example, Gradle can download the dependencies automatically, which is better than these alternatives.<br>
-a. Include those libraries in the repo (this bloats the repo size)<br>
-b. Require developers to download those libraries manually (this creates extra work for developers)</p>
+a. Include those libraries in the repo (this bloats the repo size).<br>
+b. Require developers to download those libraries manually (this creates extra work for developers).</p>
 </div>
 </div>
 </div>
@@ -3797,7 +3797,7 @@ Expected: Similar to previous.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-04 15:45:20 UTC
+Last updated 2018-04-04 15:55:16 UTC
 </div>
 </div>
 </body>
