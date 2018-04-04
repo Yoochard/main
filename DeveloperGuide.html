@@ -951,7 +951,7 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 <p>Currently <code>review</code> command and <code>rate</code> command are implemented in a similar manner, and hence <code>review</code> command and <code>edit</code> command are also implemented in a similar manner.</p>
 </div>
 <div class="paragraph">
-<p>The implementation basically mirrors what has already been documented in <code>3.3. Editing and rating a person</code>, so the implementation below is basically the iteration of the said part.</p>
+<p>The implementation basically mirrors what has already been documented in <code>3.3. Editing and rating a person</code>, so the implementation below is basically the iteration of the said part, with some modification.</p>
 </div>
 <div class="paragraph">
 <p>The implementation of <code>edit</code> and <code>review</code> command in the Logic component involves 4 objects:<br></p>
@@ -959,21 +959,21 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Person toEdit</p>
+<p><code>Person</code> personToEdit</p>
 </li>
 <li>
-<p>Person edited</p>
+<p><code>Person</code> editedPerson</p>
 </li>
 <li>
-<p>Parser: ReviewCommandParser</p>
+<p><code>Parser</code> ReviewCommandParser</p>
 </li>
 <li>
-<p>EditPersonDescriptor</p>
+<p><code>EditPersonDescriptor</code></p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>Since all fields of the <code>Person</code> class are immutable, we need to use <code>edited</code> Person to replace the <code>toEdit</code> Person</p>
+<p>Since all fields of the <code>Person</code> class are immutable, we need to use <code>Person</code> <em>editedPerson</em> to replace the <code>Person</code> <em>personToEdit</em></p>
 </div>
 <div class="paragraph">
 <p>The details of implementation are as follow:</p>
@@ -987,10 +987,11 @@ If the <code>redoStack</code> is empty, then there are no other commands left to
 <p><code>EditPersonDescriptor</code> is used to record which field(s) will be changed and the respective new value.</p>
 </li>
 <li>
-<p><code>edited</code> Person will be created, by obtaining the new value for modified fields from <code>EditPersonDescriptor</code>. The value of unmodified field(s) are obtained from <code>toEdit</code> Person.</p>
+<p><code>Person</code> <em>editedPerson</em> will be created, by obtaining the new <code>Review</code> value from <code>EditPersonDescriptor</code> together with the old <code>Review</code> value.<br>
+The old <code>Review</code> value is obtained from <code>Person</code> <em>personToEdit</em>.</p>
 </li>
 <li>
-<p><code>edited</code> Person is used to replace <code>toEdit</code> Person in <code>AddressBook</code></p>
+<p><code>Person</code> <em>editedPerson</em> is used to replace <code>Person</code> <em>personToEdit</em> in <code>AddressBook</code></p>
 </li>
 </ol>
 </div>
@@ -3772,7 +3773,7 @@ Expected: Similar to previous.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-04 06:20:24 UTC
+Last updated 2018-04-04 06:41:15 UTC
 </div>
 </div>
 </body>
