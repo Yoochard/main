@@ -61,10 +61,10 @@
 <li><a href="#deleting-an-event-in-one-employee-s-timetable-code-deleteevent-code">4.20. Deleting an event in one employee&#8217;s timetable: <code>deleteEvent</code></a></li>
 <li><a href="#clearing-all-entries-code-clear-code">4.21. Clearing all entries : <code>clear</code></a></li>
 <li><a href="#exiting-the-program-code-exit-code">4.22. Exiting the program : <code>exit</code></a></li>
-<li><a href="#dismissing-a-notification-card-code-dismiss-code">4.23. Dismissing a notification card : <code>dismiss</code></a></li>
-<li><a href="#toggling-the-notification-center-code-noti-code">4.24. Toggling the notification center : <code>noti</code></a></li>
-<li><a href="#reminding-an-employee-through-email-code-email-code">4.25. Reminding an employee through email : <code>email</code></a></li>
-<li><a href="#reminding-an-employee-through-whatsapp-code-whatsapp-code">4.26. Reminding an employee through WhatsApp : <code>whatsapp</code></a></li>
+<li><a href="#toggling-the-notification-center-code-noti-code">4.23. Toggling the notification center : <code>noti</code></a></li>
+<li><a href="#dismissing-a-notification-card-code-dismiss-code-em-coming-in-v1-5-em">4.24. Dismissing a notification card : <code>dismiss</code> <em>[Coming in v1.5]</em></a></li>
+<li><a href="#reminding-an-employee-through-email-code-email-code-em-coming-in-v1-5-em">4.25. Reminding an employee through email : <code>email</code> <em>[Coming in v1.5]</em></a></li>
+<li><a href="#reminding-an-employee-through-whatsapp-code-whatsapp-code-em-coming-in-v1-5-em">4.26. Reminding an employee through WhatsApp : <code>whatsapp</code> <em>[Coming in v1.5]</em></a></li>
 <li><a href="#upcoming-features">4.27. Upcoming features</a></li>
 </ul>
 </li>
@@ -318,7 +318,7 @@ This feature may not work on some computer systems.
 <p>To prevent notification cards from flooding the screen, notification cards in Employees Tracker (ET) will be hidden after 5 seconds.</p>
 </div>
 <div class="paragraph">
-<p>However, fret not, you can still find them in the notification center. To open the <code>Notification Center</code>, please refer to <a href="#toggling-the-notification-center-code-noti-code">Section 4.24, &#8220;Toggling the notification center : <code>noti</code>&#8221;</a>, or <strong>double press</strong> <kbd>SHIFT</kbd>. After that, you will be greeted by the <code>Notification Center</code> as shown in <em>Figure 7</em>. In the <code>Notification Center</code>, you will see a list of all un-dismissed notification cards.</p>
+<p>However, fret not, you can still find them in the notification center. To open the <code>Notification Center</code>, please refer to <a href="#toggling-the-notification-center-code-noti-code">Section 4.23, &#8220;Toggling the notification center : <code>noti</code>&#8221;</a>, or <strong>double press</strong> <kbd>SHIFT</kbd>. After that, you will be greeted by the <code>Notification Center</code> as shown in <em>Figure 7</em>. In the <code>Notification Center</code>, you will see a list of all un-dismissed notification cards.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -333,7 +333,7 @@ This feature may not work on some computer systems.
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Notification cards will always stay in the notification center. Even if you close ET, the notification card will re-appear when you open ET again. To dismiss a notification card, please refer to <a href="#dismissing-a-notification-card-code-dismiss-code">Section 4.23, &#8220;Dismissing a notification card : <code>dismiss</code>&#8221;</a>.
+Notification cards will always stay in the notification center. Even if you close ET, the notification card will re-appear when you open ET again. To dismiss a notification card, please refer to <a href="#Dismissing a notification card : <code>dismiss</code>">[Dismissing a notification card : <code>dismiss</code>]</a>.
 </td>
 </tr>
 </table>
@@ -1241,14 +1241,7 @@ Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="dismissing-a-notification-card-code-dismiss-code"><a class="link" href="#dismissing-a-notification-card-code-dismiss-code">4.23. Dismissing a notification card : <code>dismiss</code></a></h3>
-<div class="paragraph">
-<p>Dismisses the notification card identified by the index number.<br>
-Format: <code>dismiss INDEX</code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="toggling-the-notification-center-code-noti-code"><a class="link" href="#toggling-the-notification-center-code-noti-code">4.24. Toggling the notification center : <code>noti</code></a></h3>
+<h3 id="toggling-the-notification-center-code-noti-code"><a class="link" href="#toggling-the-notification-center-code-noti-code">4.23. Toggling the notification center : <code>noti</code></a></h3>
 <div class="paragraph">
 <p>Shows the notification panel if it is hidden; hides the notification center if it is shown.<br>
 Format: <code>noti</code></p>
@@ -1267,7 +1260,14 @@ Alternatively, you can <strong>double press</strong> <kbd>SHIFT</kbd> to toggle 
 </div>
 </div>
 <div class="sect2">
-<h3 id="reminding-an-employee-through-email-code-email-code"><a class="link" href="#reminding-an-employee-through-email-code-email-code">4.25. Reminding an employee through email : <code>email</code></a></h3>
+<h3 id="dismissing-a-notification-card-code-dismiss-code-em-coming-in-v1-5-em"><a class="link" href="#dismissing-a-notification-card-code-dismiss-code-em-coming-in-v1-5-em">4.24. Dismissing a notification card : <code>dismiss</code> <em>[Coming in v1.5]</em></a></h3>
+<div class="paragraph">
+<p>Dismisses the notification card identified by the index number.<br>
+Format: <code>dismiss INDEX</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="reminding-an-employee-through-email-code-email-code-em-coming-in-v1-5-em"><a class="link" href="#reminding-an-employee-through-email-code-email-code-em-coming-in-v1-5-em">4.25. Reminding an employee through email : <code>email</code> <em>[Coming in v1.5]</em></a></h3>
 <div class="paragraph">
 <p>Opens up the email app of the computer to send a reminder email about the notification identified by the index number used in notification cards.<br>
 Format: <code>email INDEX</code></p>
@@ -1295,7 +1295,7 @@ Format: <code>email INDEX</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="reminding-an-employee-through-whatsapp-code-whatsapp-code"><a class="link" href="#reminding-an-employee-through-whatsapp-code-whatsapp-code">4.26. Reminding an employee through WhatsApp : <code>whatsapp</code></a></h3>
+<h3 id="reminding-an-employee-through-whatsapp-code-whatsapp-code-em-coming-in-v1-5-em"><a class="link" href="#reminding-an-employee-through-whatsapp-code-whatsapp-code-em-coming-in-v1-5-em">4.26. Reminding an employee through WhatsApp : <code>whatsapp</code> <em>[Coming in v1.5]</em></a></h3>
 <div class="paragraph">
 <p>Opens up the WhatsApp webpage to send a reminder message about the notification identified by the index number used in notification cards.<br>
 Format: <code>whatsapp INDEX</code></p>
@@ -1443,7 +1443,7 @@ e.g.<code>unlock admin</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-04 04:04:17 UTC
+Last updated 2018-04-04 04:14:57 UTC
 </div>
 </div>
 </body>
