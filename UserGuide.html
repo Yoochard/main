@@ -157,7 +157,7 @@ adds an employee named <code>John Doe</code> to the Employees Tracker.</p>
 </li>
 <li>
 <p><code>delete 3</code><br>
-deletes the 3rd contact shown in the current list.</p>
+deletes the 3<sup>rd</sup> contact shown in the current list.</p>
 </li>
 <li>
 <p><code>exit</code><br>
@@ -285,7 +285,7 @@ ET will intelligently provide <span class="green">hints</span> according to the 
 <div class="title">Figure 5. Second phase notification card</div>
 </div>
 <div class="paragraph">
-<p>For example, suppose you have assigned a task to Alex which will due on 27th May 2018 4:00 pm. When you open ET for the first time in the morning of 27th May 2018, you will be notified that Alex has a task that will due on <strong>today</strong> in a <span class="blue">blue</span> notification card. Later at 4:00 pm of 27th May 2018, you will receive the second phase notification in <span class="red">red</span>, informing you that Alex should have finished the task by <strong>now</strong> .</p>
+<p>For example, suppose you have assigned a task to Alex which will due on 27<sup>th</sup> May 2018 4:00 pm. When you open ET for the first time in the morning of 27<sup>th</sup> May 2018, you will be notified that Alex has a task that will due on <strong>today</strong> in a <span class="blue">blue</span> notification card. Later at 4:00 pm of 27<sup>th</sup> May 2018, you will receive the second phase notification in <span class="red">red</span>, informing you that Alex should have finished the task by <strong>now</strong> .</p>
 </div>
 </div>
 <div class="sect4">
@@ -565,11 +565,11 @@ Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [r/RATING] [t/
 <ul>
 <li>
 <p><code>edit 1 p/91234567 e/johndoe@example.com</code><br>
-Edits the phone number and email address of the 1st employee to be <code>91234567</code> and <code>johndoe@example.com</code> respectively.</p>
+Edits the phone number and email address of the 1<sup>st</sup> employee to be <code>91234567</code> and <code>johndoe@example.com</code> respectively.</p>
 </li>
 <li>
 <p><code>edit 2 n/Betsy Crower t/</code><br>
-Edits the name of the 2nd employee to be <code>Betsy Crower</code> and clears all existing tags.</p>
+Edits the name of the 2<sup>nd</sup> employee to be <code>Betsy Crower</code> and clears all existing tags.</p>
 </li>
 </ul>
 </div>
@@ -632,12 +632,12 @@ Format: <code>rate INDEX RATING</code></p>
 <li>
 <p><code>list</code><br>
 <code>rate 1 5</code><br>
-Gives the 1st employee in the last employees listing a 5-stars rating.</p>
+Gives the 1<sup>st</sup> employee in the last employees listing a 5-stars rating.</p>
 </li>
 <li>
 <p><code>find Alex</code><br>
 <code>rate 2 2</code><br>
-Gives the 2nd employee in the list of Alex(s) a 2-star rating.</p>
+Gives the 2<sup>nd</sup> employee in the list of Alex(s) a 2-star rating.</p>
 </li>
 </ul>
 </div>
@@ -658,8 +658,8 @@ The index refers to the index number shown in the last employees listing.<br>
 The index <strong>must be a positive integer</strong>, i.e. 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>A pop-up dialog box will appear after user executes the command.<br>
-The dialog box will prompt the user to enter the review.</p>
+<p>A pop-up dialog box will appear after user executes the command as shown in <em>Figure 8</em> below.<br>
+The dialog box will prompt the user to enter the user&#8217;s credential (as a reviewer) and the review.</p>
 </li>
 <li>
 <p>The review can contain any character without length limitation.</p>
@@ -670,6 +670,12 @@ The dialog box will prompt the user to enter the review.</p>
 </ul>
 </div>
 </div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/review_dialog.png" alt="review dialog" width="">
+</div>
+<div class="title">Figure 8. A pop-up dialog box</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -700,13 +706,13 @@ The dialog box will prompt the user to enter the review.</p>
 <li>
 <p><code>list</code><br>
 <code>review 1</code><br>
-Gives the 1st employee in the last employees listing a review.<br>
+Gives the 1<sup>st</sup> employee in the last employees listing a review.<br>
 The review will be based on the input in the pop-up dialog box.</p>
 </li>
 <li>
 <p><code>find n/Alex</code><br>
 <code>rate 2</code><br>
-Gives the 2nd employee in the list of Alex(s) a review.<br>
+Gives the 2<sup>nd</sup> employee in the list of Alex(s) a review.<br>
 The review will be based on the input in the pop-up dialog box.</p>
 </li>
 </ul>
@@ -815,12 +821,12 @@ Format: <code>delete INDEX</code></p>
 <li>
 <p><code>list</code><br>
 <code>delete 2</code><br>
-Deletes the 2nd employee and his calendar in the Employees Tracker.</p>
+Deletes the 2<sup>nd</sup> employee and his calendar in the Employees Tracker.</p>
 </li>
 <li>
 <p><code>find Betsy</code><br>
 <code>delete 1</code><br>
-Deletes the 1st employee and his calendar in the results of the <code>find</code> command.</p>
+Deletes the 1<sup>st</sup> employee and his calendar in the results of the <code>find</code> command.</p>
 </li>
 </ul>
 </div>
@@ -856,12 +862,12 @@ Format: <code>select INDEX</code></p>
 <li>
 <p><code>list</code><br>
 <code>select 2</code><br>
-Selects the 2nd employee in the Employees Tracker.</p>
+Selects the 2<sup>nd</sup> employee in the Employees Tracker.</p>
 </li>
 <li>
 <p><code>find Betsy</code><br>
 <code>select 1</code><br>
-Selects the 1st employee in the results of the <code>find</code> command.</p>
+Selects the 1<sup>st</sup> employee in the results of the <code>find</code> command.</p>
 </li>
 </ul>
 </div>
@@ -881,7 +887,7 @@ If the <code>Calendar row</code> of the <code>Employee&#8217;s Profile Panel</co
 <div class="content">
 <img src="images/sign_in.png" alt="sign in" width="][height="200"">
 </div>
-<div class="title">Figure 8. Signing in to Google account at the Calendar row</div>
+<div class="title">Figure 9. Signing in to Google account at the Calendar row</div>
 </div>
 </div>
 <div class="sect2">
@@ -1161,7 +1167,7 @@ Format: <code>addEvent INDEX title/TITLE loca/LOCATION stime/STRATTIME etime/END
 <li>
 <p><code>list</code><br>
 <code>addEvent 2 title/Test Event loca/NUS, Singapore stime/2017-04-09T19:00:00 etime/2018-04-09T21:00:00 descrip/A Test Event</code><br>
-Adds the event to 2nd employee&#8217;s timetable in the list.</p>
+Adds the event to 2<sup>nd</sup> employee&#8217;s timetable in the list.</p>
 </li>
 </ul>
 </div>
@@ -1181,13 +1187,13 @@ If you are using Employees Tracker (ET) for the first time, you will be directed
 <div class="content">
 <img src="images/login_prompt.png" alt="login prompt" width="][height="200"">
 </div>
-<div class="title">Figure 9. Process of signing in to Google account for the first time</div>
+<div class="title">Figure 10. Process of signing in to Google account for the first time</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/login_done.png" alt="login done" width="][height="200"">
 </div>
-<div class="title">Figure 10. Done signing in</div>
+<div class="title">Figure 11. Done signing in</div>
 </div>
 </div>
 <div class="sect2">
@@ -1221,7 +1227,7 @@ Format: <code>deleteEvent INDEX TITLE</code></p>
 <li>
 <p><code>list</code><br>
 <code>deleteEvent 2 some event</code><br>
-Deletes the event with title "some event" in 2nd employee&#8217;s timetable in the list.</p>
+Deletes the event with title "some event" in 2<sup>nd</sup> employee&#8217;s timetable in the list.</p>
 </li>
 </ul>
 </div>
@@ -1443,7 +1449,7 @@ e.g.<code>unlock admin</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-04 04:52:13 UTC
+Last updated 2018-04-04 05:53:57 UTC
 </div>
 </div>
 </body>
