@@ -400,7 +400,7 @@ There is no need to save manually.</p>
 <div class="sect2">
 <h3 id="logging-in-code-unlock-code"><a class="link" href="#logging-in-code-unlock-code">4.1. Logging in : <code>unlock</code></a></h3>
 <div class="paragraph">
-<p>Unlocks the Employee Tracker.<br>
+<p>Unlocks the Employees Tracker.<br>
 Format: <code>unlock PASSWORD</code></p>
 </div>
 <div class="admonitionblock note">
@@ -451,7 +451,7 @@ Format: <code>unlock PASSWORD</code></p>
 <ul>
 <li>
 <p><code>unlock 123</code><br>
-Unlock the Employees Tracker with password: 123 (which is also the application&#8217;s unlock password)</p>
+Unlocks the Employees Tracker with password: 123 (which is also the application&#8217;s unlock password)</p>
 </li>
 </ul>
 </div>
@@ -1027,15 +1027,33 @@ Format: <code>lock</code></p>
 <ul>
 <li>
 <p><code>lock</code><br>
-Lock the Employees Tracker.</p>
+Locks the Employees Tracker.</p>
 </li>
 </ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+After you locked Employees Tracker, you won&#8217;t see any information on the User Interface. All information will be hiding when Employees Tracker is locked. Refer to Figure 10 below.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/lock_screen.png" alt="lock screen" width="][height="400"">
+</div>
+<div class="title">Figure 10. Hididng information when Employees Tracker is locked</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="viewing-my-own-calendar-code-mycalendar-code"><a class="link" href="#viewing-my-own-calendar-code-mycalendar-code">4.15. Viewing my own calendar: <code>myCalendar</code></a></h3>
 <div class="paragraph">
-<p>Views my own calendar in a seperate pop-up web page window.<br>
+<p>Views my own calendar in a separate pop-up web page window.<br>
 Format: <code>myCalendar</code></p>
 </div>
 <div class="paragraph">
@@ -1045,7 +1063,7 @@ Format: <code>myCalendar</code></p>
 <ul>
 <li>
 <p><code>myCalendar</code><br>
-view my own calendar in a pop-up window.</p>
+views my own calendar in a pop-up window.</p>
 </li>
 </ul>
 </div>
@@ -1063,15 +1081,21 @@ Format: <code>todoList</code></p>
 <ul>
 <li>
 <p><code>todoList</code><br>
-show the to-do-list in  a pop-up window.</p>
+shows the to-do-list in  a pop-up window. Refer to Figure 11 below.</p>
 </li>
 </ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/todolist.png" alt="todolist" width="][height="400"">
+</div>
+<div class="title">Figure 11. Hididng information when Employees Tracker is locked</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="setting-the-application-unlock-password-code-setpassword-code"><a class="link" href="#setting-the-application-unlock-password-code-setpassword-code">4.17. Setting the application unlock password: <code>setPassword</code></a></h3>
 <div class="paragraph">
-<p>Sets Employees Tracker&#8217;s password.<br>
+<p>Sets Employees Tracker&#8217;s unlock password.<br>
 Format: <code>setPassword OLD_PASSWORD NEW_PASSWORD</code></p>
 </div>
 <div class="sidebarblock">
@@ -1101,7 +1125,7 @@ Format: <code>setPassword OLD_PASSWORD NEW_PASSWORD</code></p>
 <ul>
 <li>
 <p><code>setPassword 123 qwe</code><br>
-Set Employees Tracker&#8217;s password from '123' (current application password) to 'qwe'.</p>
+Sets Employees Tracker&#8217;s password from '123' (current application password) to 'qwe'.</p>
 </li>
 </ul>
 </div>
@@ -1199,13 +1223,13 @@ If you are using Employees Tracker (ET) for the first time, you will be directed
 <div class="content">
 <img src="images/login_prompt.png" alt="login prompt" width="][height="200"">
 </div>
-<div class="title">Figure 10. Process of signing in to Google account for the first time</div>
+<div class="title">Figure 12. Process of signing in to Google account for the first time</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/login_done.png" alt="login done" width="][height="200"">
 </div>
-<div class="title">Figure 11. Done signing in</div>
+<div class="title">Figure 13. Done signing in</div>
 </div>
 </div>
 <div class="sect2">
@@ -1239,7 +1263,7 @@ Format: <code>deleteEvent INDEX TITLE</code></p>
 <li>
 <p><code>list</code><br>
 <code>deleteEvent 2 some event</code><br>
-Deletes the event with title "some event" in 2<sup>nd</sup> employee&#8217;s timetable in the list.</p>
+Deletes the event with title "some event" in 2<sup>nd</sup> employee&#8217;s timetable.</p>
 </li>
 </ul>
 </div>
@@ -1348,25 +1372,20 @@ Format: <code>whatsapp INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Editing a event.</p>
+<p>Editing an event.<br>
+You will be able to edit an event at any time.</p>
 </li>
 <li>
-<p>Deleting a event.</p>
+<p>Adding an event in mass to many employees' timetable at once.<br>
+You will be able to add an event to many employee&#8217;s timetable at once for maximum convenience.</p>
 </li>
 <li>
-<p>Adding an event in mass to many employees' timetable at once.</p>
+<p>Jumping to email composing with a command.<br>
+You will be able to jump to email with a command</p>
 </li>
 <li>
-<p>Jumping to email composing with a command.</p>
-</li>
-<li>
-<p>Viewing my to-do-list.</p>
-</li>
-<li>
-<p>Changing the window scheme/theme/skin.</p>
-</li>
-<li>
-<p>Encrypting data files.</p>
+<p>Encrypting data files.<br>
+Employee Tracker will ensure data security by encrypting data files.</p>
 </li>
 </ul>
 </div>
@@ -1442,6 +1461,9 @@ e.g.<code>select 2</code></p>
 e.g.`setPassword admin 12345</code></p>
 </li>
 <li>
+<p><strong>TodoList</strong> : <code>todoList</code></p>
+</li>
+<li>
 <p><strong>History</strong> : <code>history</code></p>
 </li>
 <li>
@@ -1461,7 +1483,7 @@ e.g.<code>unlock admin</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-04 15:29:12 UTC
+Last updated 2018-04-04 15:32:20 UTC
 </div>
 </div>
 </body>

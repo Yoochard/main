@@ -1070,17 +1070,17 @@ if they are the same, unlock the application, otherwise, inform incorrect passwo
 <h3 id="assign-a-timetable-to-every-employee"><a class="link" href="#assign-a-timetable-to-every-employee">3.7. Assign a timetable to every employee</a></h3>
 <div class="paragraph">
 <p>To implement the timetables for employees, we use a third party source which is Google Calendar API. With this API, we
-can integrate the application with Google Calendar, and achieve things liking creating events as what we usually do on
-Google Calendar website through the command. The import of Google Calendar API is simple: just add the necessary
+can integrate the application with Google Calendar, and achieve things liking creating events through application commands as what we usually do on
+Google Calendar website. The import of Google Calendar API is simple: just add the necessary
 dependencies in Build.gradle and which will import the external libraries after building.</p>
 </div>
 <div class="paragraph">
 <p>After we have the API, what we need to do is just automatically creating a new timetable (calendar) for every employee
-at the time this employee was added to the application. And this is what the CreateNewCalendar class for.</p>
+at the time this employee was added to Employees Tracker.</p>
 </div>
 <div class="paragraph">
 <p>Additionally, as everyone has their own unique timetables, a new field called <code>CalendarId</code> will be created for each
-employee, to indicate the associated timetables.</p>
+employee, to indicate their associated timetables.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2423,7 +2423,7 @@ for <code>RemarkCommandParser</code>.</p>
 <p>need to assign work to employees and keep track of it</p>
 </li>
 <li>
-<p>prefer desktop apps over mobile apps</p>
+<p>prefers desktop apps over mobile apps</p>
 </li>
 <li>
 <p>can type fast, i.e. &gt;45 words per minute</p>
@@ -3773,7 +3773,7 @@ Expected: Similar to previous.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-04 15:29:12 UTC
+Last updated 2018-04-04 15:32:20 UTC
 </div>
 </div>
 </body>
