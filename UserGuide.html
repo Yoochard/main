@@ -52,7 +52,7 @@
 <li><a href="#listing-entered-commands-code-history-code">4.11. Listing entered commands : <code>history</code></a></li>
 <li><a href="#undoing-previous-command-code-undo-code">4.12. Undoing previous command : <code>undo</code></a></li>
 <li><a href="#redoing-the-previously-undone-command-code-redo-code">4.13. Redoing the previously undone command : <code>redo</code></a></li>
-<li><a href="#locking-the-employeetracker-temporary-code-lock-code">4.14. Locking the EmployeeTracker temporary: <code>lock</code></a></li>
+<li><a href="#locking-employees-tracker-temporary-code-lock-code">4.14. Locking Employees Tracker temporary: <code>lock</code></a></li>
 <li><a href="#viewing-my-own-calendar-code-mycalendar-code">4.15. Viewing my own calendar: <code>myCalendar</code></a></li>
 <li><a href="#viewing-my-to-do-list-code-todolist-code">4.16. Viewing my to-do-list: <code>todoList</code></a></li>
 <li><a href="#setting-the-application-unlock-password-code-setpassword-code">4.17. Setting the application unlock password: <code>setPassword</code></a></li>
@@ -153,7 +153,7 @@ lists all employees.</p>
 </li>
 <li>
 <p><code>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code><br>
-adds an employee named <code>John Doe</code> to the Employees Tracker.</p>
+adds an employee named <code>John Doe</code> to Employees Tracker.</p>
 </li>
 <li>
 <p><code>delete 3</code><br>
@@ -229,7 +229,7 @@ exits the app.</p>
 <p>Hints about the format and usage of the command in <span class="green">green</span>.</p>
 </li>
 <li>
-<p>Statuses of the Employee Tracker in <span class="white">white</span>, if your command is processed successfully.</p>
+<p>Statuses of Employees Tracker in <span class="white">white</span>, if your command is processed successfully.</p>
 </li>
 </ul>
 </div>
@@ -400,7 +400,7 @@ There is no need to save manually.</p>
 <div class="sect2">
 <h3 id="logging-in-code-unlock-code"><a class="link" href="#logging-in-code-unlock-code">4.1. Logging in : <code>unlock</code></a></h3>
 <div class="paragraph">
-<p>Unlocks the Employees Tracker.<br>
+<p>Unlocks Employees Tracker.<br>
 Format: <code>unlock PASSWORD</code></p>
 </div>
 <div class="admonitionblock note">
@@ -413,7 +413,7 @@ Format: <code>unlock PASSWORD</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>The Employees Tracker is locked when Employee Tracker is opened.</p>
+<p>Employees Tracker is locked when Employees Tracker is opened.</p>
 </li>
 <li>
 <p>The initial default password is 'admin', refer to <a href="#Setting the application unlock password: <code>setPassword</code> <code>[Since v1.3]</code>">[Setting the application unlock password: <code>setPassword</code> <code>[Since v1.3]</code>]</a> if you want to change your password.</p>
@@ -429,7 +429,7 @@ Format: <code>unlock PASSWORD</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Unlock the EmployeeTracker with the PASSWORD which match the application&#8217;s unlock password.</p>
+<p>Unlock the Employees Tracker with the PASSWORD which match the application&#8217;s unlock password.</p>
 </li>
 <li>
 <p>PASSWORD is requiered.</p>
@@ -451,7 +451,7 @@ Format: <code>unlock PASSWORD</code></p>
 <ul>
 <li>
 <p><code>unlock 123</code><br>
-Unlocks the Employees Tracker with password: 123 (which is also the application&#8217;s unlock password)</p>
+Unlocks Employees Tracker with password: 123 (which is also the application&#8217;s unlock password)</p>
 </li>
 </ul>
 </div>
@@ -466,7 +466,7 @@ Format: <code>help</code></p>
 <div class="sect2">
 <h3 id="adding-an-employee-code-add-code"><a class="link" href="#adding-an-employee-code-add-code">4.3. Adding an employee: <code>add</code></a></h3>
 <div class="paragraph">
-<p>Adds an employee to the Employees Tracker<br>
+<p>Adds an employee to Employees Tracker<br>
 Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code></p>
 </div>
 <div class="admonitionblock tip">
@@ -498,7 +498,7 @@ An employee can have any number of tags (including 0)
 <div class="sect2">
 <h3 id="listing-all-employees-code-list-code"><a class="link" href="#listing-all-employees-code-list-code">4.4. Listing all employees : <code>list</code></a></h3>
 <div class="paragraph">
-<p>Shows a list of all employees in the Employees Tracker.<br>
+<p>Shows a list of all employees in Employees Tracker.<br>
 Format: <code>list</code></p>
 </div>
 <div class="sidebarblock">
@@ -544,7 +544,7 @@ Format: <code>list</code></p>
 <div class="sect2">
 <h3 id="editing-an-employee-code-edit-code"><a class="link" href="#editing-an-employee-code-edit-code">4.5. Editing an employee : <code>edit</code></a></h3>
 <div class="paragraph">
-<p>Edits an existing employee in the Employees Tracker.<br>
+<p>Edits an existing employee in Employees Tracker.<br>
 Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [r/RATING] [t/TAG]&#8230;&#8203;</code></p>
 </div>
 <div class="sidebarblock">
@@ -589,7 +589,7 @@ Edits the name of the 2<sup>nd</sup> employee to be <code>Betsy Crower</code> an
 <div class="sect2">
 <h3 id="rating-an-employee-code-rate-code"><a class="link" href="#rating-an-employee-code-rate-code">4.6. Rating an employee : <code>rate</code></a></h3>
 <div class="paragraph">
-<p>Updates the rating of an existing employee in the Employees Tracker.<br>
+<p>Updates the rating of an existing employee in Employees Tracker.<br>
 Format: <code>rate INDEX RATING</code></p>
 </div>
 <div class="sidebarblock">
@@ -657,7 +657,7 @@ Gives the 2<sup>nd</sup> employee in the list of Alex(s) a 2-star rating.</p>
 <div class="sect2">
 <h3 id="reviewing-an-employee-code-review-code"><a class="link" href="#reviewing-an-employee-code-review-code">4.7. Reviewing an employee : <code>review</code></a></h3>
 <div class="paragraph">
-<p>Assigns a review to an existing employee in the Employees Tracker.<br>
+<p>Assigns a review to an existing employee in Employees Tracker.<br>
 Format: <code>review INDEX</code></p>
 </div>
 <div class="sidebarblock">
@@ -665,13 +665,8 @@ Format: <code>review INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Rate the employee at the specified <code>INDEX</code>.<br>
-The index refers to the index number shown in the last employees listing.<br>
+<p>The index refers to the index number shown in the last employees listing.<br>
 The index <strong>must be a positive integer</strong>, i.e. 1, 2, 3, &#8230;&#8203;</p>
-</li>
-<li>
-<p>A pop-up dialog box will appear after user executes the command as shown in <em>Figure 8</em> below.<br>
-The dialog box will prompt the user to enter the user&#8217;s credential (as a reviewer) and the review.</p>
 </li>
 <li>
 <p>The review can contain any character without length limitation.</p>
@@ -682,12 +677,6 @@ The dialog box will prompt the user to enter the user&#8217;s credential (as a r
 </ul>
 </div>
 </div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/review_dialog.png" alt="review dialog" width="">
-</div>
-<div class="title">Figure 8. A pop-up dialog box</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -719,15 +708,20 @@ The dialog box will prompt the user to enter the user&#8217;s credential (as a r
 <p><code>list</code><br>
 <code>review 1</code><br>
 Gives the 1<sup>st</sup> employee in the last employees listing a review.<br>
-The review will be based on the input in the pop-up dialog box.</p>
+A pop-up dialog box will appear after user executes the command as shown in <em>Figure 8</em> below. The dialog box will prompt the user to enter the user&#8217;s credential (as a reviewer) and the review.</p>
 </li>
 <li>
 <p><code>find n/Alex</code><br>
 <code>rate 2</code><br>
-Gives the 2<sup>nd</sup> employee in the list of Alex(s) a review.<br>
-The review will be based on the input in the pop-up dialog box.</p>
+Gives the 2<sup>nd</sup> employee in the list of Alex(s) a review.<br></p>
 </li>
 </ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/review_dialog.png" alt="review dialog" width="">
+</div>
+<div class="title">Figure 8. A pop-up dialog box</div>
 </div>
 </div>
 <div class="sect2">
@@ -750,14 +744,14 @@ Format: <code>find (n/NAME_KEYPHRASE | t/TAG_KEYPHRASE | r/RATING_KEYPHRASE)  [n
 <p>The search does not match exactly all the words in a phrase in sequential order, but only finds any phrase that contains the specified keyphrase&#8217;s words without sequential order, e.g. <code>n/Hans Bo</code> will match <code>Jonathan Bo Hans</code></p>
 </li>
 <li>
-<p>The search only matches full wor, e.g. <code>n/Han</code> will not match <code>Hans</code></p>
+<p>The search only matches full word, e.g. <code>n/Han</code> will not match <code>Hans</code></p>
 </li>
 <li>
-<p>Searching by multiple criteria will yield the result of employees that match all the criterias, e.g.<br></p>
+<p>Searching by multiple criteria will yield the result of employees that match all of them, e.g.<br></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>n/Hans Bo t/Sales</code> will match <code>Hans Bo</code> with tag <code>Friends</code> but not <code>Hans Bo</code> with tag <code>Enemy</code> or <code>John Doe</code> with tag <code>Friends</code><br></p>
+<p><code>n/Hans Bo t/Sales</code> will match <code>Hans Bo</code> with tag <code>Sales</code> but not <code>Hans Bo</code> with tag <code>Enemy</code> or <code>John Doe</code> with tag <code>Friends</code><br></p>
 </li>
 <li>
 <p><code>n/Hans Bo n/John Doe t/Sales t/Marketing</code> will match only <code>Hans Bo | Sales</code> or <code>Hans Bo | Marketing</code> or <code>John Doe | Sales</code> or <code>John Doe | Marketing</code></p>
@@ -805,7 +799,7 @@ e.g. <code>John Doe | Friends</code>, <code>John Dick| Colleagues</code>, <code>
 <div class="sect2">
 <h3 id="deleting-an-employee-code-delete-code"><a class="link" href="#deleting-an-employee-code-delete-code">4.9. Deleting an employee : <code>delete</code></a></h3>
 <div class="paragraph">
-<p>Deletes the specified employee from the Employees Tracker whose calendar will also be deleted.<br>
+<p>Deletes the specified employee from Employees Tracker whose calendar will also be deleted.<br>
 Format: <code>delete INDEX</code></p>
 </div>
 <div class="sidebarblock">
@@ -833,7 +827,7 @@ Format: <code>delete INDEX</code></p>
 <li>
 <p><code>list</code><br>
 <code>delete 2</code><br>
-Deletes the 2<sup>nd</sup> employee and his calendar in the Employees Tracker.</p>
+Deletes the 2<sup>nd</sup> employee and his calendar in Employees Tracker.</p>
 </li>
 <li>
 <p><code>find Betsy</code><br>
@@ -874,7 +868,7 @@ Format: <code>select INDEX</code></p>
 <li>
 <p><code>list</code><br>
 <code>select 2</code><br>
-Selects the 2<sup>nd</sup> employee in the Employees Tracker.</p>
+Selects the 2<sup>nd</sup> employee in Employees Tracker.</p>
 </li>
 <li>
 <p><code>find Betsy</code><br>
@@ -926,7 +920,7 @@ Format: <code>history</code></p>
 <div class="sect2">
 <h3 id="undoing-previous-command-code-undo-code"><a class="link" href="#undoing-previous-command-code-undo-code">4.12. Undoing previous command : <code>undo</code></a></h3>
 <div class="paragraph">
-<p>Restores the Employees Tracker to the state before the previous <em>undoable</em> command was executed.<br>
+<p>Restores Employees Tracker to the state before the previous <em>undoable</em> command was executed.<br>
 Format: <code>undo</code></p>
 </div>
 <div class="admonitionblock note">
@@ -937,7 +931,7 @@ Format: <code>undo</code></p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Undoable commands: those commands that modify the Employees Tracker&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
+<p>Undoable commands: those commands that modify Employees Tracker&#8217;s content (<code>add</code>, <code>delete</code>, <code>edit</code> and <code>clear</code>).</p>
 </div>
 </td>
 </tr>
@@ -1001,9 +995,9 @@ The <code>redo</code> command fails as there are no <code>undo</code> commands e
 </div>
 </div>
 <div class="sect2">
-<h3 id="locking-the-employeetracker-temporary-code-lock-code"><a class="link" href="#locking-the-employeetracker-temporary-code-lock-code">4.14. Locking the EmployeeTracker temporary: <code>lock</code></a></h3>
+<h3 id="locking-employees-tracker-temporary-code-lock-code"><a class="link" href="#locking-employees-tracker-temporary-code-lock-code">4.14. Locking Employees Tracker temporary: <code>lock</code></a></h3>
 <div class="paragraph">
-<p>Locks the Employee Tracker, so that the data is protected without the need of closing the program or shutting down your computer.<br>
+<p>Locks Employees Tracker, so that the data is protected without the need of closing the program or shutting down your computer.<br>
 Format: <code>lock</code></p>
 </div>
 <div class="sidebarblock">
@@ -1014,7 +1008,7 @@ Format: <code>lock</code></p>
 <p>The <code>Employees List Panel</code> and <code>Employee&#8217;s Profile Panel</code> will be emptied when Employees Tracker is locked.</p>
 </li>
 <li>
-<p>Employee Tracker will not respond to any command other than <code>unlock</code> when it is locked.</p>
+<p>Employees Tracker will not respond to any command other than <code>unlock</code> when it is locked.</p>
 </li>
 </ul>
 </div>
@@ -1027,7 +1021,7 @@ Format: <code>lock</code></p>
 <ul>
 <li>
 <p><code>lock</code><br>
-Locks the Employees Tracker.</p>
+Locks Employees Tracker.</p>
 </li>
 </ul>
 </div>
@@ -1271,7 +1265,7 @@ Deletes the event with title "some event" in 2<sup>nd</sup> employee&#8217;s tim
 <div class="sect2">
 <h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">4.21. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
-<p>Clears all entries from the Employees Tracker.<br>
+<p>Clears all entries from Employees Tracker.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
@@ -1385,7 +1379,7 @@ You will be able to jump to email with a command</p>
 </li>
 <li>
 <p>Encrypting data files.<br>
-Employee Tracker will ensure data security by encrypting data files.</p>
+Employees Tracker will ensure data security by encrypting data files.</p>
 </li>
 </ul>
 </div>
@@ -1483,7 +1477,7 @@ e.g.<code>unlock admin</code></p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-04-05 18:51:07 UTC
+Last updated 2018-04-06 07:54:55 UTC
 </div>
 </div>
 </body>
